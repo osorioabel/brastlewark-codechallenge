@@ -1,8 +1,9 @@
 PODS:
   - Alamofire (4.3.0)
   - Gloss (1.2.0)
-  - KeychainAccess (3.0.1)
   - Localize-Swift (1.7.1)
+  - Moya (8.0.2):
+    - Moya/Core (= 8.0.2)
   - Moya/Core (8.0.2):
     - Alamofire (~> 4.1)
     - Result (~> 3.0)
@@ -16,33 +17,35 @@ PODS:
     - RxCocoa (~> 3.0)
     - RxSwift (~> 3.0)
   - RxSwift (3.2.0)
+  - SnapKit (3.1.2)
   - SwiftyUserDefaults (3.0.0)
   - TextAttributes (1.0)
 
 DEPENDENCIES:
   - Gloss (~> 1.2)
-  - KeychainAccess
   - Localize-Swift (~> 1.7)
+  - Moya (= 8.0.2)
   - Moya/RxSwift
   - RxCocoa (~> 3.0)
   - RxDataSources (~> 1.0)
   - RxSwift (~> 3.0)
+  - SnapKit (~> 3.1.2)
   - SwiftyUserDefaults
   - TextAttributes
 
 SPEC CHECKSUMS:
   Alamofire: 856a113053a7bc9cbe5d6367a555d773fc5cfef7
   Gloss: ec49584b2e8144e39810b6db6285433316e0c1c7
-  KeychainAccess: 017ea25e313a49eda10bb19b0bb0760fb1edfe1a
   Localize-Swift: 6cabc1087c0e910e77bfa87c2ed3f65c80c0b2df
   Moya: 47f61da5b634aa71f676431b64ee0f81e976296d
   Result: 4e3ed5995ed94d0cd6a09be9a431fce3f3624bbf
   RxCocoa: ccdf43101a70407097a29082f648ba1676075b30
   RxDataSources: 1de77880bf5b7fcee42102adcd5a5d65e5b81541
   RxSwift: 46574f70d416b7923c237195939cc488a7fbf3a0
+  SnapKit: 12b24f569cb7c143acc9c22b9d91b23e7b1c84a2
   SwiftyUserDefaults: 0f1d45fc3aafb9064dac661e367f8f83fe21a4b4
   TextAttributes: 45b2713a1d174c377d320b51129c304eac381638
 
-PODFILE CHECKSUM: 0b19859dbf9035f0b02cd95204a42e0d67e79410
+PODFILE CHECKSUM: 993ab4a4c004cf350c53156793b60eb92e60f785
 
 COCOAPODS: 1.2.0

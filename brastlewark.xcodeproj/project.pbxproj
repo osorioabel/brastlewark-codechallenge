@@ -8,9 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		0D51F89E1E43F5B100A86035 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D51F89D1E43F5B100A86035 /* AppDelegate.swift */; };
-		0D51F8A01E43F5B100A86035 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D51F89F1E43F5B100A86035 /* ViewController.swift */; };
 		0D51F8A51E43F5B100A86035 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0D51F8A41E43F5B100A86035 /* Assets.xcassets */; };
 		0D51F8A81E43F5B100A86035 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0D51F8A61E43F5B100A86035 /* LaunchScreen.storyboard */; };
+		0D51F8C41E43FF8300A86035 /* GnomesListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D51F8C21E43FF8300A86035 /* GnomesListViewController.swift */; };
+		0D51F8C51E43FF8300A86035 /* GnomesListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0D51F8C31E43FF8300A86035 /* GnomesListViewController.xib */; };
+		0D51F8C81E44000B00A86035 /* RxMoyaTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D51F8C71E44000B00A86035 /* RxMoyaTarget.swift */; };
+		0D51F8CB1E44010000A86035 /* SampleDataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D51F8CA1E44010000A86035 /* SampleDataHelper.swift */; };
+		0D51F8CE1E44038E00A86035 /* Response+Gloss.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D51F8CD1E44038E00A86035 /* Response+Gloss.swift */; };
+		0D51F8D11E4403E300A86035 /* Observable+Gloss.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D51F8D01E4403E300A86035 /* Observable+Gloss.swift */; };
+		0D51F8D31E44040300A86035 /* Observable+SubscribeNext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D51F8D21E44040300A86035 /* Observable+SubscribeNext.swift */; };
+		0D51F8D51E44047800A86035 /* RemoteImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D51F8D41E44047800A86035 /* RemoteImageView.swift */; };
 		6CE82DE9CC524FDA24101FDD /* Pods_brastlewark.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09CD828A6CD1367556813C6B /* Pods_brastlewark.framework */; };
 /* End PBXBuildFile section */
 
@@ -18,10 +25,17 @@
 		09CD828A6CD1367556813C6B /* Pods_brastlewark.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_brastlewark.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0D51F89A1E43F5B100A86035 /* brastlewark.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = brastlewark.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0D51F89D1E43F5B100A86035 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		0D51F89F1E43F5B100A86035 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		0D51F8A41E43F5B100A86035 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0D51F8A71E43F5B100A86035 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0D51F8A91E43F5B100A86035 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0D51F8C21E43FF8300A86035 /* GnomesListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GnomesListViewController.swift; sourceTree = "<group>"; };
+		0D51F8C31E43FF8300A86035 /* GnomesListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GnomesListViewController.xib; sourceTree = "<group>"; };
+		0D51F8C71E44000B00A86035 /* RxMoyaTarget.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RxMoyaTarget.swift; sourceTree = "<group>"; };
+		0D51F8CA1E44010000A86035 /* SampleDataHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SampleDataHelper.swift; sourceTree = "<group>"; };
+		0D51F8CD1E44038E00A86035 /* Response+Gloss.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Response+Gloss.swift"; sourceTree = SOURCE_ROOT; };
+		0D51F8D01E4403E300A86035 /* Observable+Gloss.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Observable+Gloss.swift"; sourceTree = SOURCE_ROOT; };
+		0D51F8D21E44040300A86035 /* Observable+SubscribeNext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Observable+SubscribeNext.swift"; sourceTree = SOURCE_ROOT; };
+		0D51F8D41E44047800A86035 /* RemoteImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemoteImageView.swift; sourceTree = SOURCE_ROOT; };
 		1146406CE11C36739841F2AE /* Pods-brastlewark.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-brastlewark.debug.xcconfig"; path = "Pods/Target Support Files/Pods-brastlewark/Pods-brastlewark.debug.xcconfig"; sourceTree = "<group>"; };
 		27E73AF18B81491ADE455BF0 /* Pods-brastlewark.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-brastlewark.release.xcconfig"; path = "Pods/Target Support Files/Pods-brastlewark/Pods-brastlewark.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -41,10 +55,10 @@
 		0D51F8911E43F5B100A86035 = {
 			isa = PBXGroup;
 			children = (
-				0D51F89B1E43F5B100A86035 /* Products */,
-				0D51F89C1E43F5B100A86035 /* brastlewark */,
-				6CE75D1A9476BFB01BEF78D0 /* Pods */,
 				3D6B8C2C48F3BA4E4AEACB75 /* Frameworks */,
+				6CE75D1A9476BFB01BEF78D0 /* Pods */,
+				0D51F89B1E43F5B100A86035 /* Products */,
+				0D51F89C1E43F5B100A86035 /* Brastlewark */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,7 +70,7 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		0D51F89C1E43F5B100A86035 /* brastlewark */ = {
+		0D51F89C1E43F5B100A86035 /* Brastlewark */ = {
 			isa = PBXGroup;
 			children = (
 				0D51F8B21E43F65A00A86035 /* API */,
@@ -67,6 +81,7 @@
 				0D51F8B11E43F62000A86035 /* ViewControllers */,
 				0D51F89D1E43F5B100A86035 /* AppDelegate.swift */,
 			);
+			name = Brastlewark;
 			path = brastlewark;
 			sourceTree = "<group>";
 		};
@@ -76,7 +91,6 @@
 				0D51F8BA1E43F6B700A86035 /* Assets */,
 				0D51F8A61E43F5B100A86035 /* LaunchScreen.storyboard */,
 			);
-			name = Resources;
 			path = Resources;
 			sourceTree = "<group>";
 		};
@@ -85,25 +99,24 @@
 			children = (
 				0D51F8A91E43F5B100A86035 /* Info.plist */,
 			);
-			name = "Support Files";
 			path = "Support Files";
 			sourceTree = "<group>";
 		};
 		0D51F8B11E43F62000A86035 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				0D51F89F1E43F5B100A86035 /* ViewController.swift */,
+				0D51F8C21E43FF8300A86035 /* GnomesListViewController.swift */,
+				0D51F8C31E43FF8300A86035 /* GnomesListViewController.xib */,
 			);
-			name = ViewControllers;
 			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 		0D51F8B21E43F65A00A86035 /* API */ = {
 			isa = PBXGroup;
 			children = (
+				0D51F8C61E43FFE700A86035 /* Networking */,
 				0D51F8B31E43F65F00A86035 /* Services */,
 			);
-			name = API;
 			path = API;
 			sourceTree = "<group>";
 		};
@@ -111,7 +124,6 @@
 			isa = PBXGroup;
 			children = (
 			);
-			name = Services;
 			path = Services;
 			sourceTree = "<group>";
 		};
@@ -120,13 +132,13 @@
 			children = (
 				0D51F8BC1E43F6E500A86035 /* Coordinators */,
 			);
-			name = Navigation;
 			path = Navigation;
 			sourceTree = "<group>";
 		};
 		0D51F8B51E43F67400A86035 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				0D51F8C91E4400C900A86035 /* Helpers */,
 				0D51F8BD1E43F6F100A86035 /* Custom Views */,
 				0D51F8B71E43F68300A86035 /* Extensions */,
 				0D51F8B91E43F6A000A86035 /* Fonts */,
@@ -134,7 +146,6 @@
 				0D51F8B61E43F67900A86035 /* Protocols */,
 				0D51F8AF1E43F60300A86035 /* Resources */,
 			);
-			name = Utilities;
 			path = Utilities;
 			sourceTree = "<group>";
 		};
@@ -142,15 +153,15 @@
 			isa = PBXGroup;
 			children = (
 			);
-			name = Protocols;
 			path = Protocols;
 			sourceTree = "<group>";
 		};
 		0D51F8B71E43F68300A86035 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				0D51F8CF1E4403CB00A86035 /* RxSwift */,
+				0D51F8CC1E44037600A86035 /* RxMoya */,
 			);
-			name = Extensions;
 			path = Extensions;
 			sourceTree = "<group>";
 		};
@@ -158,7 +169,6 @@
 			isa = PBXGroup;
 			children = (
 			);
-			name = Models;
 			path = Models;
 			sourceTree = "<group>";
 		};
@@ -166,7 +176,6 @@
 			isa = PBXGroup;
 			children = (
 			);
-			name = Fonts;
 			path = Fonts;
 			sourceTree = "<group>";
 		};
@@ -175,7 +184,6 @@
 			children = (
 				0D51F8A41E43F5B100A86035 /* Assets.xcassets */,
 			);
-			name = Assets;
 			path = Assets;
 			sourceTree = "<group>";
 		};
@@ -183,7 +191,6 @@
 			isa = PBXGroup;
 			children = (
 			);
-			name = Localizable;
 			path = Localizable;
 			sourceTree = "<group>";
 		};
@@ -191,16 +198,48 @@
 			isa = PBXGroup;
 			children = (
 			);
-			name = Coordinators;
 			path = Coordinators;
 			sourceTree = "<group>";
 		};
 		0D51F8BD1E43F6F100A86035 /* Custom Views */ = {
 			isa = PBXGroup;
 			children = (
+				0D51F8D41E44047800A86035 /* RemoteImageView.swift */,
 			);
-			name = "Custom Views";
 			path = "Custom Views";
+			sourceTree = "<group>";
+		};
+		0D51F8C61E43FFE700A86035 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				0D51F8C71E44000B00A86035 /* RxMoyaTarget.swift */,
+			);
+			name = Networking;
+			sourceTree = "<group>";
+		};
+		0D51F8C91E4400C900A86035 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				0D51F8CA1E44010000A86035 /* SampleDataHelper.swift */,
+			);
+			name = Helpers;
+			sourceTree = "<group>";
+		};
+		0D51F8CC1E44037600A86035 /* RxMoya */ = {
+			isa = PBXGroup;
+			children = (
+				0D51F8CD1E44038E00A86035 /* Response+Gloss.swift */,
+			);
+			name = RxMoya;
+			sourceTree = "<group>";
+		};
+		0D51F8CF1E4403CB00A86035 /* RxSwift */ = {
+			isa = PBXGroup;
+			children = (
+				0D51F8D01E4403E300A86035 /* Observable+Gloss.swift */,
+				0D51F8D21E44040300A86035 /* Observable+SubscribeNext.swift */,
+			);
+			name = RxSwift;
 			sourceTree = "<group>";
 		};
 		3D6B8C2C48F3BA4E4AEACB75 /* Frameworks */ = {
@@ -284,6 +323,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0D51F8A81E43F5B100A86035 /* LaunchScreen.storyboard in Resources */,
+				0D51F8C51E43FF8300A86035 /* GnomesListViewController.xib in Resources */,
 				0D51F8A51E43F5B100A86035 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -343,8 +383,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0D51F8A01E43F5B100A86035 /* ViewController.swift in Sources */,
+				0D51F8C81E44000B00A86035 /* RxMoyaTarget.swift in Sources */,
+				0D51F8CB1E44010000A86035 /* SampleDataHelper.swift in Sources */,
+				0D51F8D51E44047800A86035 /* RemoteImageView.swift in Sources */,
 				0D51F89E1E43F5B100A86035 /* AppDelegate.swift in Sources */,
+				0D51F8C41E43FF8300A86035 /* GnomesListViewController.swift in Sources */,
+				0D51F8CE1E44038E00A86035 /* Response+Gloss.swift in Sources */,
+				0D51F8D31E44040300A86035 /* Observable+SubscribeNext.swift in Sources */,
+				0D51F8D11E4403E300A86035 /* Observable+Gloss.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -501,6 +547,7 @@
 				0D51F8AE1E43F5B100A86035 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
