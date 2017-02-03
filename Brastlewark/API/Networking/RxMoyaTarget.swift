@@ -10,7 +10,6 @@ import Foundation
 import UIKit
 import Moya
 import Alamofire
-import SwiftyUserDefaults
 
 enum RxMoyaTarget {
 	

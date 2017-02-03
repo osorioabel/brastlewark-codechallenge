@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import SwiftyUserDefaults
 import RxSwift
 import CellRegistrable
 import RxDataSources
