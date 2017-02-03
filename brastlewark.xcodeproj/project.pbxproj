@@ -18,6 +18,27 @@
 		0D51F8D11E4403E300A86035 /* Observable+Gloss.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D51F8D01E4403E300A86035 /* Observable+Gloss.swift */; };
 		0D51F8D31E44040300A86035 /* Observable+SubscribeNext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D51F8D21E44040300A86035 /* Observable+SubscribeNext.swift */; };
 		0D51F8D51E44047800A86035 /* RemoteImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D51F8D41E44047800A86035 /* RemoteImageView.swift */; };
+		0D51F8D81E44050B00A86035 /* UIColor+Gnomes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D51F8D71E44050B00A86035 /* UIColor+Gnomes.swift */; };
+		0D51F8DA1E44056600A86035 /* UIFont+Gnomes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D51F8D91E44056600A86035 /* UIFont+Gnomes.swift */; };
+		0D51F8DC1E4405AD00A86035 /* ImagePinchGestureRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D51F8DB1E4405AD00A86035 /* ImagePinchGestureRecognizer.swift */; };
+		0D51F9131E44066C00A86035 /* SF-UI-Display-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0D51F9011E44066C00A86035 /* SF-UI-Display-Light.otf */; };
+		0D51F9141E44066C00A86035 /* SF-UI-Text-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0D51F9021E44066C00A86035 /* SF-UI-Text-Bold.otf */; };
+		0D51F9151E44066C00A86035 /* SF-UI-Text-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0D51F9031E44066C00A86035 /* SF-UI-Text-Light.otf */; };
+		0D51F9161E44066C00A86035 /* SF-UI-Text-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0D51F9041E44066C00A86035 /* SF-UI-Text-Medium.otf */; };
+		0D51F9171E44066C00A86035 /* SF-UI-Text-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0D51F9051E44066C00A86035 /* SF-UI-Text-Regular.otf */; };
+		0D51F9181E44066C00A86035 /* Ubuntu-B.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0D51F9061E44066C00A86035 /* Ubuntu-B.ttf */; };
+		0D51F9191E44066C00A86035 /* Ubuntu-BI.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0D51F9071E44066C00A86035 /* Ubuntu-BI.ttf */; };
+		0D51F91A1E44066C00A86035 /* Ubuntu-C.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0D51F9081E44066C00A86035 /* Ubuntu-C.ttf */; };
+		0D51F91B1E44066C00A86035 /* Ubuntu-L.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0D51F9091E44066C00A86035 /* Ubuntu-L.ttf */; };
+		0D51F91C1E44066C00A86035 /* Ubuntu-LI.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0D51F90A1E44066C00A86035 /* Ubuntu-LI.ttf */; };
+		0D51F91D1E44066C00A86035 /* Ubuntu-M.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0D51F90B1E44066C00A86035 /* Ubuntu-M.ttf */; };
+		0D51F91E1E44066C00A86035 /* Ubuntu-MI.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0D51F90C1E44066C00A86035 /* Ubuntu-MI.ttf */; };
+		0D51F91F1E44066C00A86035 /* Ubuntu-R.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0D51F90D1E44066C00A86035 /* Ubuntu-R.ttf */; };
+		0D51F9201E44066C00A86035 /* Ubuntu-RI.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0D51F90E1E44066C00A86035 /* Ubuntu-RI.ttf */; };
+		0D51F9211E44066C00A86035 /* UbuntuMono-B.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0D51F90F1E44066C00A86035 /* UbuntuMono-B.ttf */; };
+		0D51F9221E44066C00A86035 /* UbuntuMono-BI.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0D51F9101E44066C00A86035 /* UbuntuMono-BI.ttf */; };
+		0D51F9231E44066C00A86035 /* UbuntuMono-R.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0D51F9111E44066C00A86035 /* UbuntuMono-R.ttf */; };
+		0D51F9241E44066C00A86035 /* UbuntuMono-RI.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0D51F9121E44066C00A86035 /* UbuntuMono-RI.ttf */; };
 		6CE82DE9CC524FDA24101FDD /* Pods_brastlewark.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09CD828A6CD1367556813C6B /* Pods_brastlewark.framework */; };
 /* End PBXBuildFile section */
 
@@ -36,6 +57,27 @@
 		0D51F8D01E4403E300A86035 /* Observable+Gloss.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Observable+Gloss.swift"; sourceTree = SOURCE_ROOT; };
 		0D51F8D21E44040300A86035 /* Observable+SubscribeNext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Observable+SubscribeNext.swift"; sourceTree = SOURCE_ROOT; };
 		0D51F8D41E44047800A86035 /* RemoteImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemoteImageView.swift; sourceTree = SOURCE_ROOT; };
+		0D51F8D71E44050B00A86035 /* UIColor+Gnomes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Gnomes.swift"; sourceTree = SOURCE_ROOT; };
+		0D51F8D91E44056600A86035 /* UIFont+Gnomes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIFont+Gnomes.swift"; sourceTree = SOURCE_ROOT; };
+		0D51F8DB1E4405AD00A86035 /* ImagePinchGestureRecognizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImagePinchGestureRecognizer.swift; sourceTree = SOURCE_ROOT; };
+		0D51F9011E44066C00A86035 /* SF-UI-Display-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SF-UI-Display-Light.otf"; path = "brastlewark/Utilities/SF-UI-Display-Light.otf"; sourceTree = SOURCE_ROOT; };
+		0D51F9021E44066C00A86035 /* SF-UI-Text-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SF-UI-Text-Bold.otf"; path = "brastlewark/Utilities/SF-UI-Text-Bold.otf"; sourceTree = SOURCE_ROOT; };
+		0D51F9031E44066C00A86035 /* SF-UI-Text-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SF-UI-Text-Light.otf"; path = "brastlewark/Utilities/SF-UI-Text-Light.otf"; sourceTree = SOURCE_ROOT; };
+		0D51F9041E44066C00A86035 /* SF-UI-Text-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SF-UI-Text-Medium.otf"; path = "brastlewark/Utilities/SF-UI-Text-Medium.otf"; sourceTree = SOURCE_ROOT; };
+		0D51F9051E44066C00A86035 /* SF-UI-Text-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SF-UI-Text-Regular.otf"; path = "brastlewark/Utilities/SF-UI-Text-Regular.otf"; sourceTree = SOURCE_ROOT; };
+		0D51F9061E44066C00A86035 /* Ubuntu-B.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Ubuntu-B.ttf"; path = "brastlewark/Utilities/Ubuntu-B.ttf"; sourceTree = SOURCE_ROOT; };
+		0D51F9071E44066C00A86035 /* Ubuntu-BI.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Ubuntu-BI.ttf"; path = "brastlewark/Utilities/Ubuntu-BI.ttf"; sourceTree = SOURCE_ROOT; };
+		0D51F9081E44066C00A86035 /* Ubuntu-C.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Ubuntu-C.ttf"; path = "brastlewark/Utilities/Ubuntu-C.ttf"; sourceTree = SOURCE_ROOT; };
+		0D51F9091E44066C00A86035 /* Ubuntu-L.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Ubuntu-L.ttf"; path = "brastlewark/Utilities/Ubuntu-L.ttf"; sourceTree = SOURCE_ROOT; };
+		0D51F90A1E44066C00A86035 /* Ubuntu-LI.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Ubuntu-LI.ttf"; path = "brastlewark/Utilities/Ubuntu-LI.ttf"; sourceTree = SOURCE_ROOT; };
+		0D51F90B1E44066C00A86035 /* Ubuntu-M.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Ubuntu-M.ttf"; path = "brastlewark/Utilities/Ubuntu-M.ttf"; sourceTree = SOURCE_ROOT; };
+		0D51F90C1E44066C00A86035 /* Ubuntu-MI.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Ubuntu-MI.ttf"; path = "brastlewark/Utilities/Ubuntu-MI.ttf"; sourceTree = SOURCE_ROOT; };
+		0D51F90D1E44066C00A86035 /* Ubuntu-R.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Ubuntu-R.ttf"; path = "brastlewark/Utilities/Ubuntu-R.ttf"; sourceTree = SOURCE_ROOT; };
+		0D51F90E1E44066C00A86035 /* Ubuntu-RI.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Ubuntu-RI.ttf"; path = "brastlewark/Utilities/Ubuntu-RI.ttf"; sourceTree = SOURCE_ROOT; };
+		0D51F90F1E44066C00A86035 /* UbuntuMono-B.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "UbuntuMono-B.ttf"; path = "brastlewark/Utilities/UbuntuMono-B.ttf"; sourceTree = SOURCE_ROOT; };
+		0D51F9101E44066C00A86035 /* UbuntuMono-BI.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "UbuntuMono-BI.ttf"; path = "brastlewark/Utilities/UbuntuMono-BI.ttf"; sourceTree = SOURCE_ROOT; };
+		0D51F9111E44066C00A86035 /* UbuntuMono-R.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "UbuntuMono-R.ttf"; path = "brastlewark/Utilities/UbuntuMono-R.ttf"; sourceTree = SOURCE_ROOT; };
+		0D51F9121E44066C00A86035 /* UbuntuMono-RI.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "UbuntuMono-RI.ttf"; path = "brastlewark/Utilities/UbuntuMono-RI.ttf"; sourceTree = SOURCE_ROOT; };
 		1146406CE11C36739841F2AE /* Pods-brastlewark.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-brastlewark.debug.xcconfig"; path = "Pods/Target Support Files/Pods-brastlewark/Pods-brastlewark.debug.xcconfig"; sourceTree = "<group>"; };
 		27E73AF18B81491ADE455BF0 /* Pods-brastlewark.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-brastlewark.release.xcconfig"; path = "Pods/Target Support Files/Pods-brastlewark/Pods-brastlewark.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -161,6 +203,9 @@
 			children = (
 				0D51F8CF1E4403CB00A86035 /* RxSwift */,
 				0D51F8CC1E44037600A86035 /* RxMoya */,
+				0D51F8D71E44050B00A86035 /* UIColor+Gnomes.swift */,
+				0D51F8D91E44056600A86035 /* UIFont+Gnomes.swift */,
+				0D51F8DB1E4405AD00A86035 /* ImagePinchGestureRecognizer.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -175,6 +220,24 @@
 		0D51F8B91E43F6A000A86035 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
+				0D51F9011E44066C00A86035 /* SF-UI-Display-Light.otf */,
+				0D51F9021E44066C00A86035 /* SF-UI-Text-Bold.otf */,
+				0D51F9031E44066C00A86035 /* SF-UI-Text-Light.otf */,
+				0D51F9041E44066C00A86035 /* SF-UI-Text-Medium.otf */,
+				0D51F9051E44066C00A86035 /* SF-UI-Text-Regular.otf */,
+				0D51F9061E44066C00A86035 /* Ubuntu-B.ttf */,
+				0D51F9071E44066C00A86035 /* Ubuntu-BI.ttf */,
+				0D51F9081E44066C00A86035 /* Ubuntu-C.ttf */,
+				0D51F9091E44066C00A86035 /* Ubuntu-L.ttf */,
+				0D51F90A1E44066C00A86035 /* Ubuntu-LI.ttf */,
+				0D51F90B1E44066C00A86035 /* Ubuntu-M.ttf */,
+				0D51F90C1E44066C00A86035 /* Ubuntu-MI.ttf */,
+				0D51F90D1E44066C00A86035 /* Ubuntu-R.ttf */,
+				0D51F90E1E44066C00A86035 /* Ubuntu-RI.ttf */,
+				0D51F90F1E44066C00A86035 /* UbuntuMono-B.ttf */,
+				0D51F9101E44066C00A86035 /* UbuntuMono-BI.ttf */,
+				0D51F9111E44066C00A86035 /* UbuntuMono-R.ttf */,
+				0D51F9121E44066C00A86035 /* UbuntuMono-RI.ttf */,
 			);
 			path = Fonts;
 			sourceTree = "<group>";
@@ -322,9 +385,27 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0D51F91B1E44066C00A86035 /* Ubuntu-L.ttf in Resources */,
+				0D51F91D1E44066C00A86035 /* Ubuntu-M.ttf in Resources */,
+				0D51F9141E44066C00A86035 /* SF-UI-Text-Bold.otf in Resources */,
+				0D51F9231E44066C00A86035 /* UbuntuMono-R.ttf in Resources */,
 				0D51F8A81E43F5B100A86035 /* LaunchScreen.storyboard in Resources */,
+				0D51F9171E44066C00A86035 /* SF-UI-Text-Regular.otf in Resources */,
 				0D51F8C51E43FF8300A86035 /* GnomesListViewController.xib in Resources */,
+				0D51F9201E44066C00A86035 /* Ubuntu-RI.ttf in Resources */,
+				0D51F91E1E44066C00A86035 /* Ubuntu-MI.ttf in Resources */,
+				0D51F9221E44066C00A86035 /* UbuntuMono-BI.ttf in Resources */,
+				0D51F9131E44066C00A86035 /* SF-UI-Display-Light.otf in Resources */,
+				0D51F91A1E44066C00A86035 /* Ubuntu-C.ttf in Resources */,
+				0D51F9151E44066C00A86035 /* SF-UI-Text-Light.otf in Resources */,
+				0D51F9211E44066C00A86035 /* UbuntuMono-B.ttf in Resources */,
+				0D51F91F1E44066C00A86035 /* Ubuntu-R.ttf in Resources */,
+				0D51F9191E44066C00A86035 /* Ubuntu-BI.ttf in Resources */,
+				0D51F9181E44066C00A86035 /* Ubuntu-B.ttf in Resources */,
+				0D51F91C1E44066C00A86035 /* Ubuntu-LI.ttf in Resources */,
+				0D51F9161E44066C00A86035 /* SF-UI-Text-Medium.otf in Resources */,
 				0D51F8A51E43F5B100A86035 /* Assets.xcassets in Resources */,
+				0D51F9241E44066C00A86035 /* UbuntuMono-RI.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -385,12 +466,15 @@
 			files = (
 				0D51F8C81E44000B00A86035 /* RxMoyaTarget.swift in Sources */,
 				0D51F8CB1E44010000A86035 /* SampleDataHelper.swift in Sources */,
+				0D51F8DC1E4405AD00A86035 /* ImagePinchGestureRecognizer.swift in Sources */,
 				0D51F8D51E44047800A86035 /* RemoteImageView.swift in Sources */,
 				0D51F89E1E43F5B100A86035 /* AppDelegate.swift in Sources */,
+				0D51F8D81E44050B00A86035 /* UIColor+Gnomes.swift in Sources */,
 				0D51F8C41E43FF8300A86035 /* GnomesListViewController.swift in Sources */,
 				0D51F8CE1E44038E00A86035 /* Response+Gloss.swift in Sources */,
 				0D51F8D31E44040300A86035 /* Observable+SubscribeNext.swift in Sources */,
 				0D51F8D11E4403E300A86035 /* Observable+Gloss.swift in Sources */,
+				0D51F8DA1E44056600A86035 /* UIFont+Gnomes.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
