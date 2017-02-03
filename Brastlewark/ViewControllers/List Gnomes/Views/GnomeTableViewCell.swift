@@ -18,7 +18,7 @@ class GnomeTableViewCell: UITableViewCell {
 	// MARK: - IBOutlet properties
 	@IBOutlet weak var nameLabel: UILabel!
 	@IBOutlet weak var detailLabel: UILabel!
-	@IBOutlet weak var ponyimageView: RemoteImageView!
+	@IBOutlet weak var thumbnailImageView: RemoteImageView!
 	
 	// MARK: - Private properties
 	fileprivate let disposeBag = DisposeBag()
@@ -40,6 +40,10 @@ class GnomeTableViewCell: UITableViewCell {
         super.awakeFromNib()
         // Initialization code
 		self.selectionStyle = .none
+		let imagePinchGesture = ImagePinchGestureRecognizer()
+		imagePinchGesture.delegate = self
+		self.thumbnailImageView.isUserInteractionEnabled = true
+		self.thumbnailImageView.addGestureRecognizer(imagePinchGesture)
 		setupRx()
     }
 	
@@ -84,7 +88,7 @@ class GnomeTableViewCell: UITableViewCell {
 			.asObservable()
 			.subscribeNext { [unowned self] (url) in
 				guard let url = url else { return }
-				self.ponyimageView.url = url
+				self.thumbnailImageView.url = url
 			}.addDisposableTo(disposeBag)
 	}
 	
@@ -96,5 +100,4 @@ class GnomeTableViewCell: UITableViewCell {
 	func selectGnome(){
 		
 	}
-    
 }
