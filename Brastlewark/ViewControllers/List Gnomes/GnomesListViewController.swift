@@ -49,15 +49,7 @@ class GnomesListViewController: UIViewController {
 		setupNavigationBarButtons()
 		setupTableView()
 		setupRx()
-	}
-	
-	override func viewWillAppear(_ animated: Bool) {
-		super.viewWillAppear(animated)
 		refresh(force: false)
-	}
-	override func viewWillDisappear(_ animated: Bool) {
-		super.viewWillDisappear(animated)
-		NotificationCenter.default.removeObserver(self)
 	}
 	
 	// MARK: - internal helpers
