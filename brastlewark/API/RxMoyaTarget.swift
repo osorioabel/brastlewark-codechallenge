@@ -60,7 +60,7 @@ extension RxMoyaTarget: TargetType {
 	}
 	
 	// MARK: - Internal functions
-	func endpoint(authToken: String?) -> Endpoint<RxMoyaTarget> {
+	func endpoint() -> Endpoint<RxMoyaTarget> {
 		var endpoint: Endpoint<RxMoyaTarget>
 		endpoint = MoyaProvider.defaultEndpointMapping(for: self)
 		return endpoint

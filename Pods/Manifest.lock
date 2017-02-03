@@ -1,5 +1,6 @@
 PODS:
   - Alamofire (4.3.0)
+  - CellRegistrable (1.0.0)
   - Gloss (1.2.0)
   - Localize-Swift (1.7.1)
   - Moya (8.0.2):
@@ -22,6 +23,7 @@ PODS:
   - TextAttributes (1.0)
 
 DEPENDENCIES:
+  - CellRegistrable (from `https://github.com/KogiMobileSAS/CellRegistrable`, branch `swift3`)
   - Gloss (~> 1.2)
   - Localize-Swift (~> 1.7)
   - Moya (= 8.0.2)
@@ -33,8 +35,19 @@ DEPENDENCIES:
   - SwiftyUserDefaults
   - TextAttributes
 
+EXTERNAL SOURCES:
+  CellRegistrable:
+    :branch: swift3
+    :git: https://github.com/KogiMobileSAS/CellRegistrable
+
+CHECKOUT OPTIONS:
+  CellRegistrable:
+    :commit: e495548d02e8016f9f91bc879b17e6ac2540556b
+    :git: https://github.com/KogiMobileSAS/CellRegistrable
+
 SPEC CHECKSUMS:
   Alamofire: 856a113053a7bc9cbe5d6367a555d773fc5cfef7
+  CellRegistrable: 41f82dba61e7ee4b83487ead19d09374faa2cca1
   Gloss: ec49584b2e8144e39810b6db6285433316e0c1c7
   Localize-Swift: 6cabc1087c0e910e77bfa87c2ed3f65c80c0b2df
   Moya: 47f61da5b634aa71f676431b64ee0f81e976296d
@@ -46,6 +59,6 @@ SPEC CHECKSUMS:
   SwiftyUserDefaults: 0f1d45fc3aafb9064dac661e367f8f83fe21a4b4
   TextAttributes: 45b2713a1d174c377d320b51129c304eac381638
 
-PODFILE CHECKSUM: 993ab4a4c004cf350c53156793b60eb92e60f785
+PODFILE CHECKSUM: 8a170308a912ed35c335ed0a0cb84e34f43ab7ce
 
 COCOAPODS: 1.2.0

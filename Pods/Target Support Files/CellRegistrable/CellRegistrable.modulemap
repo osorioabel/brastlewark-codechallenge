@@ -1,0 +1,6 @@
+framework module CellRegistrable {
+  umbrella header "CellRegistrable-umbrella.h"
+
+  export *
+  module * { export * }
+}

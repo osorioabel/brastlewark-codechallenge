@@ -11,6 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="GnomesListViewController" customModule="brastlewark" customModuleProvider="target">
             <connections>
+                <outlet property="tableView" destination="GdL-wU-u6P" id="Rqy-01-63G"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>

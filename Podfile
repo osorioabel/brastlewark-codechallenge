@@ -12,5 +12,7 @@ target 'brastlewark' do
    pod 'Localize-Swift', '~> 1.7'
    pod 'RxDataSources', '~> 1.0'
    pod 'TextAttributes'
-    pod 'SnapKit', '~> 3.1.2'
+   pod 'SnapKit', '~> 3.1.2'
+   pod 'CellRegistrable', :git => 'https://github.com/KogiMobileSAS/CellRegistrable', :branch => 'swift3'
+
 end
