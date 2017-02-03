@@ -9,10 +9,10 @@
 import UIKit
 import RxSwift
 import CellRegistrable
-import RxDataSources
 import Localize_Swift
 import MRProgress
 import DZNEmptyDataSet
+import RxDataSources
 import TextAttributes
 
 class GnomesListViewController: UIViewController {
@@ -24,7 +24,11 @@ class GnomesListViewController: UIViewController {
 		refreshControl.addTarget(self, action: #selector(refreshControlValueChanged), for: .valueChanged)
 		return refreshControl
 	}()
-	
+	fileprivate lazy var searchViewController: UISearchController = { [unowned self] in
+		let searchController = UISearchController(searchResultsController: nil)
+		return searchController
+	}()
+
 	// MARK: - Private properties
 	fileprivate let disposeBag = DisposeBag()
 	fileprivate let dataSource = RxTableViewSectionedReloadDataSource<SectionModel<String?, Gnome>>()
@@ -49,6 +53,7 @@ class GnomesListViewController: UIViewController {
 		setupNavigationBarButtons()
 		setupTableView()
 		setupRx()
+		setupSearchViewController()
 		refresh(force: false)
 	}
 	
@@ -63,6 +68,22 @@ class GnomesListViewController: UIViewController {
 		tableView.addSubview(refreshControl)
 		tableView.tableFooterView = UIView()
 		tableView.backgroundColor = .gnomesNavigationBarColor()
+		tableView.rx.setDelegate(self)
+			.addDisposableTo(disposeBag)
+
+		tableView.rx.itemSelected
+			.subscribeNext { [unowned self] (indexPath) in
+				self.tableView.deselectRow(at: indexPath, animated: true)
+			}
+			.addDisposableTo(disposeBag)
+
+		tableView.rx.modelSelected(Gnome.self)
+			.asObservable()
+			.subscribeNext { [unowned self] (gnome) in
+				self.viewModel.showDetail(gnome: gnome)
+			}
+			.addDisposableTo(disposeBag)
+
 		dataSource.configureCell = { (_, tableView, indexPath, item) in
 			guard let cell = tableView.dequeueReusableCell(withIdentifier: GnomeTableViewCell.reuseIdentifier,
 			                                               for: indexPath) as? GnomeTableViewCell else { return UITableViewCell() }
@@ -72,33 +93,49 @@ class GnomesListViewController: UIViewController {
 		dataSource.canEditRowAtIndexPath = { _ in
 			return true
 		}
-		tableView.rx.itemSelected
-			.asObservable()
-			.subscribeNext { [unowned self] (indexPath) in
-				self.viewModel.showDetailForGnome(atIndex: indexPath.row)
-				
-			}.addDisposableTo(disposeBag)
 		NotificationCenter.default.rx.notification(Notification.Name(rawValue: LCLLanguageChangeNotification))
 			.subscribeNext { (_) in
 				self.setupRx()
 			}
 			.addDisposableTo(disposeBag)
 	}
-	
+
+	func setupSearchViewController() {
+		searchViewController.hidesNavigationBarDuringPresentation = false
+		searchViewController.dimsBackgroundDuringPresentation = false
+		searchViewController.searchBar.sizeToFit()
+		definesPresentationContext = true
+		navigationItem.titleView = searchViewController.searchBar
+	}
+
+	// MARK: - RxSwift Methods
 	func setupRx() {
-		title = "Gnomes".localized()
-		// TableView setup
 		viewModel.gnomes
 			.asObservable()
 			.map {
-				var sections: [SectionModel<String?, Gnome>] = []
-				sections.append(SectionModel(model: nil, items: $0))
-				return sections
+				if self.viewModel.query.value.isEmpty {
+					var sections: [SectionModel<String?, Gnome>] = []
+					sections.append(SectionModel(model: nil, items: $0))
+					return sections
+				}else{
+					var sections: [SectionModel<String?, Gnome>] = []
+					sections.append(SectionModel(model: nil, items: $0))
+					return sections
+				}
 			}
 			.bindTo(tableView.rx.items(dataSource: dataSource))
 			.addDisposableTo(disposeBag)
+		searchViewController.searchBar.rx.searchButtonClicked
+			.subscribeNext { [unowned self] in
+				self.searchViewController.searchBar.resignFirstResponder()
+			}
+			.addDisposableTo(disposeBag)
+		searchViewController.searchBar.rx.text
+			.map { $0 ?? "" }
+			.bindTo(viewModel.query)
+			.addDisposableTo(disposeBag)
 	}
-	
+
 	// MARK: - Private methods
 	fileprivate func refresh(force: Bool) {
 		MRProgressOverlayView.showOverlayAdded(to: view, animated: true)
@@ -118,5 +155,10 @@ class GnomesListViewController: UIViewController {
 	// MARK: - UIRefreshControl action methods
 	func refreshControlValueChanged() {
 		refresh(force: true)
+	}
+}
+extension GnomesListViewController: UITableViewDelegate{
+	func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCellEditingStyle {
+		return .none
 	}
 }
