@@ -63,7 +63,9 @@ class GnomesListViewController: UIViewController {
 	// MARK: - internal helpers
 	func setupTableView() {
 		tableView.registerCell(GnomeTableViewCell.self)
-		tableView.rowHeight = 60
+		tableView.rowHeight = 263
+		tableView.addSubview(refreshControl)
+		tableView.backgroundColor = .gnomesNavigationBarColor()
 		dataSource.configureCell = { (_, tableView, indexPath, item) in
 			guard let cell = tableView.dequeueReusableCell(withIdentifier: GnomeTableViewCell.reuseIdentifier,
 			                                               for: indexPath) as? GnomeTableViewCell else { return UITableViewCell() }

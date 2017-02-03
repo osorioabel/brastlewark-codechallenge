@@ -24,7 +24,7 @@ class GnomeTableViewCell: UITableViewCell {
 	fileprivate let disposeBag = DisposeBag()
 	fileprivate let viewModel = GnomeTableViewCellViewModel()
 	fileprivate let primaryAttributes = TextAttributes()
-		.font(Font.sfUiTextRegular.uiFont(size: 13))
+		.font(Font.sfUiTextRegular.uiFont(size: 30).monospaced())
 		.foregroundColor(.gnomesPrimaryTextColor())
 		.lineSpacing(2.0)
 	fileprivate let secondaryAttributes = TextAttributes()
@@ -50,7 +50,7 @@ class GnomeTableViewCell: UITableViewCell {
 			.map { [unowned self] (name) in
 				if let name = name {
 					let string = NSMutableAttributedString(string: "", attributes: self.primaryAttributes)
-					string.append(NSAttributedString(string: "Name: %@".localizedFormat(name), attributes: self.primaryAttributes))
+					string.append(NSAttributedString(string: "%@".localizedFormat(name), attributes: self.primaryAttributes))
 					return string
 				}
 				return NSAttributedString()
@@ -68,13 +68,13 @@ class GnomeTableViewCell: UITableViewCell {
 				
 				let string = NSMutableAttributedString(string: "", attributes: attributes)
 				if let age = $0?.age {
-					string.append(NSAttributedString(string: "%d old".localizedFormat(age), attributes: attributes))
+					string.append(NSAttributedString(string: "Age: %d years old".localizedFormat(age), attributes: attributes))
 				}
 				if let weight = $0?.weight{
-					string.append(NSAttributedString(string: "\nWeight: %d lbs".localizedFormat(weight), attributes: attributes))
+					string.append(NSAttributedString(string: "\nWeight: %.2f lbs".localizedFormat(weight), attributes: attributes))
 				}
 				if let height = $0?.height{
-					string.append(NSAttributedString(string: "\nHeight: %d".localizedFormat(height), attributes: attributes))
+					string.append(NSAttributedString(string: "\nHeight: %.2f cm".localizedFormat(height), attributes: attributes))
 				}
 				self.detailLabel.attributedText = string
 			}
@@ -90,7 +90,7 @@ class GnomeTableViewCell: UITableViewCell {
 	
 	// MARK: - Internal methods
 	func update(gnome:Gnome){
-		
+		viewModel.gnome.value = gnome
 	}
 	
 	func selectGnome(){

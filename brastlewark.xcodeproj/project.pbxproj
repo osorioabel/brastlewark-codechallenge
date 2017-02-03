@@ -73,37 +73,37 @@
 		0D51F8D71E44050B00A86035 /* UIColor+Gnomes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Gnomes.swift"; sourceTree = "<group>"; };
 		0D51F8D91E44056600A86035 /* UIFont+Gnomes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIFont+Gnomes.swift"; sourceTree = "<group>"; };
 		0D51F8DB1E4405AD00A86035 /* ImagePinchGestureRecognizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImagePinchGestureRecognizer.swift; sourceTree = "<group>"; };
-		0D51F9011E44066C00A86035 /* SF-UI-Display-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SF-UI-Display-Light.otf"; path = "SF-UI-Display-Light.otf"; sourceTree = "<group>"; };
-		0D51F9021E44066C00A86035 /* SF-UI-Text-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SF-UI-Text-Bold.otf"; path = "SF-UI-Text-Bold.otf"; sourceTree = "<group>"; };
-		0D51F9031E44066C00A86035 /* SF-UI-Text-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SF-UI-Text-Light.otf"; path = "SF-UI-Text-Light.otf"; sourceTree = "<group>"; };
-		0D51F9041E44066C00A86035 /* SF-UI-Text-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SF-UI-Text-Medium.otf"; path = "SF-UI-Text-Medium.otf"; sourceTree = "<group>"; };
-		0D51F9051E44066C00A86035 /* SF-UI-Text-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SF-UI-Text-Regular.otf"; path = "SF-UI-Text-Regular.otf"; sourceTree = "<group>"; };
-		0D51F9061E44066C00A86035 /* Ubuntu-B.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Ubuntu-B.ttf"; path = "Ubuntu-B.ttf"; sourceTree = "<group>"; };
-		0D51F9071E44066C00A86035 /* Ubuntu-BI.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Ubuntu-BI.ttf"; path = "Ubuntu-BI.ttf"; sourceTree = "<group>"; };
-		0D51F9081E44066C00A86035 /* Ubuntu-C.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Ubuntu-C.ttf"; path = "Ubuntu-C.ttf"; sourceTree = "<group>"; };
-		0D51F9091E44066C00A86035 /* Ubuntu-L.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Ubuntu-L.ttf"; path = "Ubuntu-L.ttf"; sourceTree = "<group>"; };
-		0D51F90A1E44066C00A86035 /* Ubuntu-LI.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Ubuntu-LI.ttf"; path = "Ubuntu-LI.ttf"; sourceTree = "<group>"; };
-		0D51F90B1E44066C00A86035 /* Ubuntu-M.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Ubuntu-M.ttf"; path = "Ubuntu-M.ttf"; sourceTree = "<group>"; };
-		0D51F90C1E44066C00A86035 /* Ubuntu-MI.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Ubuntu-MI.ttf"; path = "Ubuntu-MI.ttf"; sourceTree = "<group>"; };
-		0D51F90D1E44066C00A86035 /* Ubuntu-R.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Ubuntu-R.ttf"; path = "Ubuntu-R.ttf"; sourceTree = "<group>"; };
-		0D51F90E1E44066C00A86035 /* Ubuntu-RI.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Ubuntu-RI.ttf"; path = "Ubuntu-RI.ttf"; sourceTree = "<group>"; };
-		0D51F90F1E44066C00A86035 /* UbuntuMono-B.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "UbuntuMono-B.ttf"; path = "UbuntuMono-B.ttf"; sourceTree = "<group>"; };
-		0D51F9101E44066C00A86035 /* UbuntuMono-BI.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "UbuntuMono-BI.ttf"; path = "UbuntuMono-BI.ttf"; sourceTree = "<group>"; };
-		0D51F9111E44066C00A86035 /* UbuntuMono-R.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "UbuntuMono-R.ttf"; path = "UbuntuMono-R.ttf"; sourceTree = "<group>"; };
-		0D51F9121E44066C00A86035 /* UbuntuMono-RI.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "UbuntuMono-RI.ttf"; path = "UbuntuMono-RI.ttf"; sourceTree = "<group>"; };
-		0D51F9251E44088E00A86035 /* Gnome.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Gnome.swift; path = Gnome.swift; sourceTree = "<group>"; };
+		0D51F9011E44066C00A86035 /* SF-UI-Display-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-UI-Display-Light.otf"; sourceTree = "<group>"; };
+		0D51F9021E44066C00A86035 /* SF-UI-Text-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-UI-Text-Bold.otf"; sourceTree = "<group>"; };
+		0D51F9031E44066C00A86035 /* SF-UI-Text-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-UI-Text-Light.otf"; sourceTree = "<group>"; };
+		0D51F9041E44066C00A86035 /* SF-UI-Text-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-UI-Text-Medium.otf"; sourceTree = "<group>"; };
+		0D51F9051E44066C00A86035 /* SF-UI-Text-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-UI-Text-Regular.otf"; sourceTree = "<group>"; };
+		0D51F9061E44066C00A86035 /* Ubuntu-B.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Ubuntu-B.ttf"; sourceTree = "<group>"; };
+		0D51F9071E44066C00A86035 /* Ubuntu-BI.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Ubuntu-BI.ttf"; sourceTree = "<group>"; };
+		0D51F9081E44066C00A86035 /* Ubuntu-C.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Ubuntu-C.ttf"; sourceTree = "<group>"; };
+		0D51F9091E44066C00A86035 /* Ubuntu-L.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Ubuntu-L.ttf"; sourceTree = "<group>"; };
+		0D51F90A1E44066C00A86035 /* Ubuntu-LI.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Ubuntu-LI.ttf"; sourceTree = "<group>"; };
+		0D51F90B1E44066C00A86035 /* Ubuntu-M.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Ubuntu-M.ttf"; sourceTree = "<group>"; };
+		0D51F90C1E44066C00A86035 /* Ubuntu-MI.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Ubuntu-MI.ttf"; sourceTree = "<group>"; };
+		0D51F90D1E44066C00A86035 /* Ubuntu-R.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Ubuntu-R.ttf"; sourceTree = "<group>"; };
+		0D51F90E1E44066C00A86035 /* Ubuntu-RI.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Ubuntu-RI.ttf"; sourceTree = "<group>"; };
+		0D51F90F1E44066C00A86035 /* UbuntuMono-B.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "UbuntuMono-B.ttf"; sourceTree = "<group>"; };
+		0D51F9101E44066C00A86035 /* UbuntuMono-BI.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "UbuntuMono-BI.ttf"; sourceTree = "<group>"; };
+		0D51F9111E44066C00A86035 /* UbuntuMono-R.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "UbuntuMono-R.ttf"; sourceTree = "<group>"; };
+		0D51F9121E44066C00A86035 /* UbuntuMono-RI.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "UbuntuMono-RI.ttf"; sourceTree = "<group>"; };
+		0D51F9251E44088E00A86035 /* Gnome.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Gnome.swift; sourceTree = "<group>"; };
 		0D51F9271E4408CC00A86035 /* GnomeListViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GnomeListViewModel.swift; sourceTree = "<group>"; };
 		0D51F9291E44093000A86035 /* GnomeTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GnomeTableViewCell.swift; sourceTree = "<group>"; };
 		0D51F92A1E44093000A86035 /* GnomeTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GnomeTableViewCell.xib; sourceTree = "<group>"; };
 		0D51F92D1E440B5300A86035 /* GnomesAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GnomesAPI.swift; sourceTree = "<group>"; };
-		0D51F92F1E440F8D00A86035 /* UIViewcontoller+Convenience.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIViewcontoller+Convenience.swift"; path = "UIViewcontoller+Convenience.swift"; sourceTree = "<group>"; };
+		0D51F92F1E440F8D00A86035 /* UIViewcontoller+Convenience.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewcontoller+Convenience.swift"; sourceTree = "<group>"; };
 		0D51F9311E440FB900A86035 /* APIError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
-		0D51F9331E44107500A86035 /* GnomesNetworkingService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GnomesNetworkingService.swift; path = GnomesNetworkingService.swift; sourceTree = "<group>"; };
+		0D51F9331E44107500A86035 /* GnomesNetworkingService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GnomesNetworkingService.swift; sourceTree = "<group>"; };
 		0D51F9351E4410B500A86035 /* GnomesClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GnomesClient.swift; sourceTree = "<group>"; };
 		0D51F93A1E44192200A86035 /* GnomeTableViewCellViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GnomeTableViewCellViewModel.swift; sourceTree = "<group>"; };
 		0D51F93C1E4423CF00A86035 /* Coordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
-		0D51F93E1E44242500A86035 /* AppCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppCoordinator.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
-		0D51F9401E44245600A86035 /* GnomeCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GnomeCoordinator.swift; path = GnomeCoordinator.swift; sourceTree = "<group>"; };
+		0D51F93E1E44242500A86035 /* AppCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		0D51F9401E44245600A86035 /* GnomeCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GnomeCoordinator.swift; sourceTree = "<group>"; };
 		1146406CE11C36739841F2AE /* Pods-brastlewark.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-brastlewark.debug.xcconfig"; path = "Pods/Target Support Files/Pods-brastlewark/Pods-brastlewark.debug.xcconfig"; sourceTree = "<group>"; };
 		27E73AF18B81491ADE455BF0 /* Pods-brastlewark.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-brastlewark.release.xcconfig"; path = "Pods/Target Support Files/Pods-brastlewark/Pods-brastlewark.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -124,6 +124,7 @@
 			isa = PBXGroup;
 			children = (
 				0D51F89C1E43F5B100A86035 /* Brastlewark */,
+				0D51F8B01E43F60D00A86035 /* Support Files */,
 				3D6B8C2C48F3BA4E4AEACB75 /* Frameworks */,
 				6CE75D1A9476BFB01BEF78D0 /* Pods */,
 				0D51F89B1E43F5B100A86035 /* Products */,
@@ -144,12 +145,10 @@
 				0D51F8B21E43F65A00A86035 /* API */,
 				0D51F8B81E43F69600A86035 /* Models */,
 				0D51F8B41E43F66800A86035 /* Navigation */,
-				0D51F8B01E43F60D00A86035 /* Support Files */,
 				0D51F8B51E43F67400A86035 /* Utilities */,
 				0D51F8B11E43F62000A86035 /* ViewControllers */,
 				0D51F89D1E43F5B100A86035 /* AppDelegate.swift */,
 			);
-			name = Brastlewark;
 			path = Brastlewark;
 			sourceTree = "<group>";
 		};
@@ -167,7 +166,8 @@
 			children = (
 				0D51F8A91E43F5B100A86035 /* Info.plist */,
 			);
-			path = "Support Files";
+			name = "Support Files";
+			path = "Brastlewark/Support Files";
 			sourceTree = "<group>";
 		};
 		0D51F8B11E43F62000A86035 /* ViewControllers */ = {
@@ -311,7 +311,6 @@
 				0D51F9351E4410B500A86035 /* GnomesClient.swift */,
 				0D51F8C71E44000B00A86035 /* RxMoyaTarget.swift */,
 			);
-			name = Networking;
 			path = Networking;
 			sourceTree = "<group>";
 		};
@@ -320,7 +319,6 @@
 			children = (
 				0D51F8CA1E44010000A86035 /* SampleDataHelper.swift */,
 			);
-			name = Helpers;
 			path = Helpers;
 			sourceTree = "<group>";
 		};
@@ -329,7 +327,6 @@
 			children = (
 				0D51F8CD1E44038E00A86035 /* Response+Gloss.swift */,
 			);
-			name = RxMoya;
 			path = RxMoya;
 			sourceTree = "<group>";
 		};
@@ -339,7 +336,6 @@
 				0D51F8D01E4403E300A86035 /* Observable+Gloss.swift */,
 				0D51F8D21E44040300A86035 /* Observable+SubscribeNext.swift */,
 			);
-			name = RxSwift;
 			path = RxSwift;
 			sourceTree = "<group>";
 		};
@@ -351,7 +347,6 @@
 				0D51F8C21E43FF8300A86035 /* GnomesListViewController.swift */,
 				0D51F8C31E43FF8300A86035 /* GnomesListViewController.xib */,
 			);
-			name = "List Gnomes";
 			path = "List Gnomes";
 			sourceTree = "<group>";
 		};
@@ -362,7 +357,6 @@
 				0D51F92A1E44093000A86035 /* GnomeTableViewCell.xib */,
 				0D51F93A1E44192200A86035 /* GnomeTableViewCellViewModel.swift */,
 			);
-			name = Views;
 			path = Views;
 			sourceTree = "<group>";
 		};
@@ -371,7 +365,6 @@
 			children = (
 				0D51F9271E4408CC00A86035 /* GnomeListViewModel.swift */,
 			);
-			name = ViewModel;
 			path = ViewModel;
 			sourceTree = "<group>";
 		};

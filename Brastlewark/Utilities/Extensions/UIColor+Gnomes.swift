@@ -21,19 +21,19 @@ extension UIColor {
 	User input copy, table/list headers
 	*/
 	static func gnomesPrimaryTextColor() -> UIColor {
-		return UIColor(intRed: 74, intGreen: 74, intBlue: 74)
+		return .white
 	}
 	
 	/**
 	Body copy, placeholder text
 	*/
 	static func gnomesSecondaryTextColor() -> UIColor {
-		return UIColor(intRed: 155, intGreen: 155, intBlue: 155)
+		return .white
 	}
 	
 	// Navigation Bar
 	static func gnomesNavigationBarColor() -> UIColor {
-		return white
+		return .black
 	}
 	
 	static func gnomesNavigationBarTintColor() -> UIColor {
