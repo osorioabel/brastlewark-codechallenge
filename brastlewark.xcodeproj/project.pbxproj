@@ -52,6 +52,9 @@
 		0D51F93D1E4423CF00A86035 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D51F93C1E4423CF00A86035 /* Coordinator.swift */; };
 		0D51F93F1E44242500A86035 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D51F93E1E44242500A86035 /* AppCoordinator.swift */; };
 		0D51F9411E44245600A86035 /* GnomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D51F9401E44245600A86035 /* GnomeCoordinator.swift */; };
+		0D9D87021E444D730006422A /* GnomeDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D9D87001E444D730006422A /* GnomeDetailViewController.swift */; };
+		0D9D87031E444D730006422A /* GnomeDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0D9D87011E444D730006422A /* GnomeDetailViewController.xib */; };
+		0D9D87061E444E700006422A /* GnomeDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D9D87051E444E700006422A /* GnomeDetailViewModel.swift */; };
 		6CE82DE9CC524FDA24101FDD /* Pods_brastlewark.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09CD828A6CD1367556813C6B /* Pods_brastlewark.framework */; };
 /* End PBXBuildFile section */
 
@@ -104,6 +107,9 @@
 		0D51F93C1E4423CF00A86035 /* Coordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		0D51F93E1E44242500A86035 /* AppCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		0D51F9401E44245600A86035 /* GnomeCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GnomeCoordinator.swift; sourceTree = "<group>"; };
+		0D9D87001E444D730006422A /* GnomeDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GnomeDetailViewController.swift; sourceTree = "<group>"; };
+		0D9D87011E444D730006422A /* GnomeDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GnomeDetailViewController.xib; sourceTree = "<group>"; };
+		0D9D87051E444E700006422A /* GnomeDetailViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GnomeDetailViewModel.swift; sourceTree = "<group>"; };
 		1146406CE11C36739841F2AE /* Pods-brastlewark.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-brastlewark.debug.xcconfig"; path = "Pods/Target Support Files/Pods-brastlewark/Pods-brastlewark.debug.xcconfig"; sourceTree = "<group>"; };
 		27E73AF18B81491ADE455BF0 /* Pods-brastlewark.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-brastlewark.release.xcconfig"; path = "Pods/Target Support Files/Pods-brastlewark/Pods-brastlewark.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -146,7 +152,7 @@
 				0D51F8B81E43F69600A86035 /* Models */,
 				0D51F8B41E43F66800A86035 /* Navigation */,
 				0D51F8B51E43F67400A86035 /* Utilities */,
-				0D51F8B11E43F62000A86035 /* ViewControllers */,
+				0D9D86FE1E444D2A0006422A /* ViewControllers */,
 				0D51F89D1E43F5B100A86035 /* AppDelegate.swift */,
 			);
 			path = Brastlewark;
@@ -170,12 +176,15 @@
 			path = "Brastlewark/Support Files";
 			sourceTree = "<group>";
 		};
-		0D51F8B11E43F62000A86035 /* ViewControllers */ = {
+		0D51F8B11E43F62000A86035 /* Gnome Detail */ = {
 			isa = PBXGroup;
 			children = (
-				0D51F9371E44174300A86035 /* List Gnomes */,
+				0D9D87041E444E5E0006422A /* View Model */,
+				0D9D87001E444D730006422A /* GnomeDetailViewController.swift */,
+				0D9D87011E444D730006422A /* GnomeDetailViewController.xib */,
 			);
-			path = ViewControllers;
+			name = "Gnome Detail";
+			path = ..;
 			sourceTree = "<group>";
 		};
 		0D51F8B21E43F65A00A86035 /* API */ = {
@@ -347,7 +356,7 @@
 				0D51F8C21E43FF8300A86035 /* GnomesListViewController.swift */,
 				0D51F8C31E43FF8300A86035 /* GnomesListViewController.xib */,
 			);
-			path = "List Gnomes";
+			name = "List Gnomes";
 			sourceTree = "<group>";
 		};
 		0D51F9381E44175E00A86035 /* Views */ = {
@@ -366,6 +375,32 @@
 				0D51F9271E4408CC00A86035 /* GnomeListViewModel.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		0D9D86FE1E444D2A0006422A /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				0D9D86FF1E444D410006422A /* Gnome */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		0D9D86FF1E444D410006422A /* Gnome */ = {
+			isa = PBXGroup;
+			children = (
+				0D51F9371E44174300A86035 /* List Gnomes */,
+				0D51F8B11E43F62000A86035 /* Gnome Detail */,
+			);
+			name = Gnome;
+			path = "ViewControllers/List Gnomes";
+			sourceTree = "<group>";
+		};
+		0D9D87041E444E5E0006422A /* View Model */ = {
+			isa = PBXGroup;
+			children = (
+				0D9D87051E444E700006422A /* GnomeDetailViewModel.swift */,
+			);
+			name = "View Model";
 			sourceTree = "<group>";
 		};
 		3D6B8C2C48F3BA4E4AEACB75 /* Frameworks */ = {
@@ -456,6 +491,7 @@
 				0D51F8A81E43F5B100A86035 /* LaunchScreen.storyboard in Resources */,
 				0D51F9171E44066C00A86035 /* SF-UI-Text-Regular.otf in Resources */,
 				0D51F8C51E43FF8300A86035 /* GnomesListViewController.xib in Resources */,
+				0D9D87031E444D730006422A /* GnomeDetailViewController.xib in Resources */,
 				0D51F9201E44066C00A86035 /* Ubuntu-RI.ttf in Resources */,
 				0D51F91E1E44066C00A86035 /* Ubuntu-MI.ttf in Resources */,
 				0D51F9221E44066C00A86035 /* UbuntuMono-BI.ttf in Resources */,
@@ -538,8 +574,10 @@
 				0D51F89E1E43F5B100A86035 /* AppDelegate.swift in Sources */,
 				0D51F8D81E44050B00A86035 /* UIColor+Gnomes.swift in Sources */,
 				0D51F9341E44107500A86035 /* GnomesNetworkingService.swift in Sources */,
+				0D9D87021E444D730006422A /* GnomeDetailViewController.swift in Sources */,
 				0D51F92E1E440B5300A86035 /* GnomesAPI.swift in Sources */,
 				0D51F9281E4408CC00A86035 /* GnomeListViewModel.swift in Sources */,
+				0D9D87061E444E700006422A /* GnomeDetailViewModel.swift in Sources */,
 				0D51F8C41E43FF8300A86035 /* GnomesListViewController.swift in Sources */,
 				0D51F9411E44245600A86035 /* GnomeCoordinator.swift in Sources */,
 				0D51F9361E4410B500A86035 /* GnomesClient.swift in Sources */,

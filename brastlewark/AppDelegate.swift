@@ -15,7 +15,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 	var appCoordinator: AppCoordinator!
 
 	func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-		// Override point for customization after application launch.
 		customizeAppereance()
 		let urlCache = URLCache(memoryCapacity: 50 * 1024 * 1024, diskCapacity: 200 * 1024 * 1024, diskPath: nil)
 		URLCache.shared = urlCache

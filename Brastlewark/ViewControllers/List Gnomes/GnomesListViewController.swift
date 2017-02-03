@@ -11,7 +11,9 @@ import RxSwift
 import CellRegistrable
 import RxDataSources
 import Localize_Swift
-
+import MRProgress
+import DZNEmptyDataSet
+import TextAttributes
 
 class GnomesListViewController: UIViewController {
 
@@ -44,14 +46,13 @@ class GnomesListViewController: UIViewController {
 	// MARK: - View Life Cycle
 	override func viewDidLoad() {
 		super.viewDidLoad()
-		navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+		setupNavigationBarButtons()
 		setupTableView()
 		setupRx()
 	}
 	
 	override func viewWillAppear(_ animated: Bool) {
 		super.viewWillAppear(animated)
-		
 		refresh(force: false)
 	}
 	override func viewWillDisappear(_ animated: Bool) {
@@ -60,16 +61,20 @@ class GnomesListViewController: UIViewController {
 	}
 	
 	// MARK: - internal helpers
+	func setupNavigationBarButtons(){
+		navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+	}
+	
 	func setupTableView() {
 		tableView.registerCell(GnomeTableViewCell.self)
 		tableView.rowHeight = 263
 		tableView.addSubview(refreshControl)
+		tableView.tableFooterView = UIView()
 		tableView.backgroundColor = .gnomesNavigationBarColor()
 		dataSource.configureCell = { (_, tableView, indexPath, item) in
 			guard let cell = tableView.dequeueReusableCell(withIdentifier: GnomeTableViewCell.reuseIdentifier,
 			                                               for: indexPath) as? GnomeTableViewCell else { return UITableViewCell() }
 			cell.update(gnome: item)
-			cell.delegate = self
 			return cell
 		}
 		dataSource.canEditRowAtIndexPath = { _ in
@@ -78,8 +83,8 @@ class GnomesListViewController: UIViewController {
 		tableView.rx.itemSelected
 			.asObservable()
 			.subscribeNext { [unowned self] (indexPath) in
-				guard let cell = self.tableView.cellForRow(at: indexPath) as? GnomeTableViewCell else { return }
-				cell.selectGnome()
+				self.viewModel.showDetailForGnome(atIndex: indexPath.row)
+				
 			}.addDisposableTo(disposeBag)
 		NotificationCenter.default.rx.notification(Notification.Name(rawValue: LCLLanguageChangeNotification))
 			.subscribeNext { (_) in
@@ -104,13 +109,16 @@ class GnomesListViewController: UIViewController {
 	
 	// MARK: - Private methods
 	fileprivate func refresh(force: Bool) {
+		MRProgressOverlayView.showOverlayAdded(to: view, animated: true)
 		viewModel.getGnomes()
 			.do(onCompleted: { [unowned self] in
 				self.refreshControl.endRefreshing()
+				MRProgressOverlayView.dismissAllOverlays(for: self.view, animated: true)
 			})
 			.subscribeError { [unowned self] (error) in
 				UIAlertController.showFromViewController(self, forError: error)
 				self.refreshControl.endRefreshing()
+				MRProgressOverlayView.dismissAllOverlays(for: self.view, animated: true)
 			}
 			.addDisposableTo(disposeBag)
 	}
@@ -118,11 +126,5 @@ class GnomesListViewController: UIViewController {
 	// MARK: - UIRefreshControl action methods
 	func refreshControlValueChanged() {
 		refresh(force: true)
-	}
-	
-}
-// MARK: - GnomeTableViewCellDelegate protocol conformance
-extension GnomesListViewController: GnomeTableViewCellDelegate{
-	func gnomeTableViewCellDelegate(_ cell: GnomeTableViewCell, didTapGnome gnome: Gnome){
 	}
 }

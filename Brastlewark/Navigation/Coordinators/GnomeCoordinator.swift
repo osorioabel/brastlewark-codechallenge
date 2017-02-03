@@ -40,9 +40,9 @@ class GnomeCoordinator: Coordinator {
 	}
 	
 	fileprivate func goToDetail(_ gnome: Gnome) {
-//		let ponyDetailVM = PoniesDetailViewModel(pony)
-//		let ponyDetailVC = PonyDetailViewController(viewModel: ponyDetailVM)
-//		navigationController.pushViewController(ponyDetailVC, animated: true)
+		let gnomeDetailVM = GnomeDetailViewModel(with: gnome)
+		let gnomeDetailVC = GnomeDetailViewController(viewModel: gnomeDetailVM)
+		navigationController.pushViewController(gnomeDetailVC, animated: true)
 	}
 }
 

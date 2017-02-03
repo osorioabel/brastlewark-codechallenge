@@ -23,11 +23,6 @@ class GnomeListViewModel {
 	
 	init() {
 		gnomes = Variable([Gnome]())
-		setupRx()
-	}
-	
-	fileprivate func setupRx(){
-		
 	}
 	
 	func getGnomes() -> Observable<Void> {
@@ -37,7 +32,12 @@ class GnomeListViewModel {
 				return ()
 		}
 	}
-	func showDetail(_ gnome: Gnome) {
-		coordinatorDelegate?.gnomeListViewModel(self, didTapGnome: gnome)
+	
+	func showDetailForGnome(atIndex index: Int) {
+		coordinatorDelegate?.gnomeListViewModel(self, didTapGnome: gnomes.value[index])
+	}
+	
+	func deleteAll(){
+		gnomes.value = []
 	}
 }

@@ -10,14 +10,10 @@ import UIKit
 import RxSwift
 import TextAttributes
 
-protocol GnomeTableViewCellDelegate: class {
-	func gnomeTableViewCellDelegate(_ cell: GnomeTableViewCell, didTapGnome gnome: Gnome)
-}
 class GnomeTableViewCell: UITableViewCell {
 
 	// MARK: - IBOutlet properties
 	@IBOutlet weak var nameLabel: UILabel!
-	@IBOutlet weak var detailLabel: UILabel!
 	@IBOutlet weak var thumbnailImageView: RemoteImageView!
 	
 	// MARK: - Private properties
@@ -27,14 +23,6 @@ class GnomeTableViewCell: UITableViewCell {
 		.font(Font.sfUiTextRegular.uiFont(size: 30).monospaced())
 		.foregroundColor(.gnomesPrimaryTextColor())
 		.lineSpacing(2.0)
-	fileprivate let secondaryAttributes = TextAttributes()
-		.font(Font.sfUiTextRegular.uiFont(size: 13))
-		.foregroundColor(.gnomesSecondaryTextColor())
-		.lineSpacing(2.0)
-	
-	
-	// MARK: - Internal Properties
-	weak var delegate: GnomeTableViewCellDelegate?
 	
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -61,29 +49,6 @@ class GnomeTableViewCell: UITableViewCell {
 			}
 			.bindTo(nameLabel.rx.attributedText)
 			.addDisposableTo(disposeBag)
-		// description
-		viewModel.gnome
-			.asObservable()
-			.subscribeNext { [unowned self] in
-				let attributes = TextAttributes()
-					.font(Font.sfUiTextRegular.uiFont(size: 13))
-					.foregroundColor(.gnomesSecondaryTextColor())
-					.lineSpacing(2.0)
-				
-				let string = NSMutableAttributedString(string: "", attributes: attributes)
-				if let age = $0?.age {
-					string.append(NSAttributedString(string: "Age: %d years old".localizedFormat(age), attributes: attributes))
-				}
-				if let weight = $0?.weight{
-					string.append(NSAttributedString(string: "\nWeight: %.2f lbs".localizedFormat(weight), attributes: attributes))
-				}
-				if let height = $0?.height{
-					string.append(NSAttributedString(string: "\nHeight: %.2f cm".localizedFormat(height), attributes: attributes))
-				}
-				self.detailLabel.attributedText = string
-			}
-			.addDisposableTo(disposeBag)
-
 		viewModel.imageURL
 			.asObservable()
 			.subscribeNext { [unowned self] (url) in
@@ -95,9 +60,5 @@ class GnomeTableViewCell: UITableViewCell {
 	// MARK: - Internal methods
 	func update(gnome:Gnome){
 		viewModel.gnome.value = gnome
-	}
-	
-	func selectGnome(){
-		
 	}
 }

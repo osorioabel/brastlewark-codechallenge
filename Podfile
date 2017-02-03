@@ -13,4 +13,6 @@ target 'brastlewark' do
    pod 'TextAttributes'
    pod 'SnapKit', '~> 3.1.2'
    pod 'CellRegistrable', :git => 'https://github.com/KogiMobileSAS/CellRegistrable', :branch => 'swift3'
+   pod 'MRProgress'
+   pod 'DZNEmptyDataSet'
 end
