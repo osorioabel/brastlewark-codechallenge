@@ -1,12 +1,14 @@
-# Brastlewark - Codechallenge
+# Brastlewark - Code challenge
 
 # Why I use.....
 
-* **RxSwift/RxCocoa**: Simplify the async taks and provide several extension to make responsive UIs 
+#### As requested here is a list of the libraries I used on the demo and why
 
-* **RxDataSources:** With this library we can conform UITableView and UICollectionView delegates and Datasources less tedious. There is a large number of delegate methods that need to be implemented for the simplest case possible.
+* **RxSwift/RxCocoa**: Simplify the async tasks and provide several extension to make responsive UIs 
 
-* **Moya o Moya/RxSwift:** Networking layer abstraction and great companion for combine Rx and Alamofire (which is a dependecy of Moya)
+* **RxDataSources:** With this library we can conform UITableView and UICollectionView delegates and datasources protocols less tedious. There is a large number of delegate methods that need to be implemented for the simplest case possible.
+
+* **Moya o Moya/RxSwift:** Networking layer abstraction and great companion for combine Rx and Alamofire (which is a dependency of Moya)
 
 * **Gloss:** Simple to use provide simple API to decode and encode models.
 
@@ -18,6 +20,13 @@
 
 * **CellRegistrable:** Useful extension to register UITableViewCell or UICollectionCell when we are not using Storyboards
 
-* **MRProgress:** One of many Loading HUB arround the iOS community
+* **MRProgress:** One of many Loading HUB around the iOS community
 
 * **SwiftyUserDefaults:** Swifty way to manage,store,retreive data from NSDefaults
+
+# Hidden features 
+#### As is probable to miss features on this demo app, here a list of them:
+
+* Change Language: The app supports Spanish and English.
+
+* Zoomable ImageView: Every UIImageView had a pinch gesture to zoom in and zoom out like Instagram does
