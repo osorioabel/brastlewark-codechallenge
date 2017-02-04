@@ -20,13 +20,13 @@ extension UserDefaults {
 			set(NSKeyedArchiver.archivedData(withRootObject: json), forKey: key._key)
 		}
 	}
-	
+
 	func unarchive<T: Decodable>(_ key: SwiftyUserDefaults.DefaultsKey<[T]>) -> [T]? {
 		return data(forKey: key._key)
 			.flatMap { NSKeyedUnarchiver.unarchiveObject(with: $0) as? [JSON] }
 			.flatMap { [T].from(jsonArray: $0) }
 	}
-	
+
 	subscript(key: DefaultsKey<[Gnome]>) -> [Gnome] {
 		get { return unarchive(key) ?? [] }
 		set { archive(key, newValue) }

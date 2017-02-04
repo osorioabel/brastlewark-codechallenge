@@ -434,6 +434,7 @@
 				0D51F8961E43F5B100A86035 /* Sources */,
 				0D51F8971E43F5B100A86035 /* Frameworks */,
 				0D51F8981E43F5B100A86035 /* Resources */,
+				0DC538DB1E459374009DE01A /* Swift Lint Run Script */,
 				2F14170B548C323EB44D3C06 /* [CP] Embed Pods Frameworks */,
 				C6148DD57547E3F5605973DA /* [CP] Copy Pods Resources */,
 			);
@@ -515,6 +516,20 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		0DC538DB1E459374009DE01A /* Swift Lint Run Script */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Swift Lint Run Script";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\ncount=0\nfor file_path in $(git ls-files -om --exclude-from=.gitignore | grep \".swift$\"); do\nexport SCRIPT_INPUT_FILE_$count=$file_path\ncount=$((count + 1))\ndone\nfor file_path in $(git diff --cached --name-only | grep \".swift$\"); do\nexport SCRIPT_INPUT_FILE_$count=$file_path\ncount=$((count + 1))\ndone\n\nif [ $count -gt 0 ]; then\nexport SCRIPT_INPUT_FILE_COUNT=$count\nswiftlint lint --use-script-input-files\nfi\nelse\necho \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi";
+		};
 		2F14170B548C323EB44D3C06 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;

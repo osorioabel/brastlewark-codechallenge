@@ -28,12 +28,12 @@ class RemoteImageView: UIImageView {
 		let activityIndicatorView = UIActivityIndicatorView()
 		return activityIndicatorView
 	}()
-	
+
 	// MARK: - Internal properties
 	var url: URL? {
 		didSet {
 			guard url != oldValue else { return }
-			
+
 			// Cancel any previous request
 			disposeBag = DisposeBag()
 			image = nil
@@ -47,17 +47,17 @@ class RemoteImageView: UIImageView {
 		self.url = url
 		super.init(frame: .zero)
 		addSubview(activityIndicatorView)
-		
+
 		activityIndicatorView.snp.makeConstraints { (make) in
 			make.center.equalTo(self)
 			make.height.width.equalTo(30)
 		}
 	}
-	
+
 	required init?(coder aDecoder: NSCoder) {
 		super.init(coder: aDecoder)
 	}
-	
+
 	// MARK: - Private methods
 	fileprivate func loadImageFrom(url: URL) {
 		loading = true

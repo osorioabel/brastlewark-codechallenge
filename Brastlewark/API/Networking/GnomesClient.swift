@@ -20,11 +20,11 @@ enum InternalError: Swift.Error {
 }
 
 final class MoyaShakeClient {
-	
+
 	// MARK: - Private properties
 	fileprivate let disposeBag = DisposeBag()
 	static let sharedInstance = MoyaShakeClient()
-	
+
 	lazy var provider: RxMoyaProvider<RxMoyaTarget> = { [unowned self] in
 		var networkActivityCount = 0
 		let provider = RxMoyaProvider<RxMoyaTarget>(
@@ -49,14 +49,12 @@ final class MoyaShakeClient {
 			])
 		return provider
 		}()
-	
-	
-	
+
 	// MARK: - Initialization functions
 	private init() {
 		print("MoyaShakeClient Initialized")
 	}
-	
+
 	// MARK: - Gnomes Related functions
 	func listPonies() -> Observable<[Gnome]> {
 		return provider.request(.getGnomes)
@@ -65,7 +63,7 @@ final class MoyaShakeClient {
 			.mapJSON()
 			.map {
 				guard let json = $0 as? [String: AnyObject] else { throw InternalError.unexpectedResponse }
-				
+
 				var gnomes: [Gnome] = []
 				if let gnomesJSON = json["Brastlewark"] as? [JSON] {
 					gnomes = [Gnome].from(jsonArray: gnomesJSON) ?? []
@@ -76,7 +74,7 @@ final class MoyaShakeClient {
 	}
 }
 extension ObservableType where E == Response {
-	
+
 	func filterApiErrors() -> Observable<Response> {
 		return `do`(onNext: { (response) in
 			do {

@@ -23,20 +23,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 		self.window = window
 		appCoordinator = AppCoordinator(window: window)
 		appCoordinator.start()
-		
+
 		window.frame = UIScreen.main.bounds
 		window.makeKeyAndVisible()
 		return true
 	}
 }
 extension AppDelegate {
-	
-	func customizeAppereance(){
+
+	func customizeAppereance() {
 		UINavigationBar.appearance().tintColor = .white
 		UINavigationBar.appearance().barTintColor = .black
-		UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName:UIColor.white]
+		UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName: UIColor.white]
 		UIApplication.shared.statusBarStyle = .lightContent
 	}
 
 }
-

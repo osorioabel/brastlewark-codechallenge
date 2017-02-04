@@ -19,18 +19,18 @@ class GnomeCoordinator: Coordinator {
 		}
 		return UINavigationController()
 	}
-	
+
 	// MARK: - Initializers
 	init() {
 		rootViewController = UINavigationController()
 		coordinators = [:]
 	}
-	
+
 	// MARK: - Coordinator
 	func start() {
 		showGnomesListScreen()
 	}
-	
+
 	// MARK: - Helpers
 	fileprivate func showGnomesListScreen() {
 		let gnomesListVM = GnomeListViewModel()
@@ -38,7 +38,7 @@ class GnomeCoordinator: Coordinator {
 		gnomesListVM.coordinatorDelegate = self
 		navigationController.setViewControllers([gnomesListVC], animated: true)
 	}
-	
+
 	fileprivate func goToDetail(_ gnome: Gnome) {
 		let gnomeDetailVM = GnomeDetailViewModel(with: gnome)
 		let gnomeDetailVC = GnomeDetailViewController(viewModel: gnomeDetailVM)

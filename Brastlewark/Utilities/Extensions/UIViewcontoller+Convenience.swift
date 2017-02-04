@@ -22,7 +22,7 @@ extension UIAlertController {
 		}
 		viewController.present(alertController, animated: true, completion: nil)
 	}
-	
+
 	class func messageFor(error: Swift.Error) -> String {
 		var errorDescription: String
 		switch error {
@@ -56,7 +56,7 @@ extension UIAlertController {
 		}
 		return errorDescription
 	}
-	
+
 	class func showFromViewController(_ viewController: UIViewController, forError error: Swift.Error, closeButtonHandler: (() -> Void)? = nil) {
 		showFromViewController(viewController, message: messageFor(error: error), firstButtonHandler: closeButtonHandler)
 	}

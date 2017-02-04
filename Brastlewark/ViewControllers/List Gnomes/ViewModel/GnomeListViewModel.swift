@@ -18,26 +18,26 @@ class GnomeListViewModel {
 	// MARK: - Private properties
 	fileprivate let disposeBag = DisposeBag()
 	fileprivate let searchResults = Variable<[Gnome]>([])
-	
+
 	// MARK: - Internal properties
 	weak var coordinatorDelegate: GnomeListViewModelCoordinatorDelegate?
 	let gnomes = Variable<[Gnome]>([])
-	var cachedGnomes:[Gnome]
+	var cachedGnomes: [Gnome]
 	let query = Variable<String>("")
-	
+
 	init() {
 		cachedGnomes = Defaults[.recentlyDonwloadedGnomes]
 		setupRx()
 	}
 
-	func setupRx(){
+	func setupRx() {
 		let observedQuery = query.asObservable()
 			.throttle(0.3, scheduler: MainScheduler.instance)
 			.distinctUntilChanged()
 			.map { $0.trimmingCharacters(in: .whitespacesAndNewlines) }
-		
+
 		observedQuery
-			.filter{ $0.characters.count >= 3}
+			.filter { $0.characters.count >= 3}
 			.map { [unowned self] (query) in
 				self.filterGnomeByName(query: query)
 			}
@@ -59,8 +59,8 @@ class GnomeListViewModel {
 
 	fileprivate func filterGnomeByName(query: String) -> [Gnome] {
 		let searchArray = self.gnomes.value
-		let results:[Gnome] = searchArray.filter({ ($0.name?.contains(query))!})
-			if results.count > 0{
+		let results: [Gnome] = searchArray.filter({ ($0.name?.contains(query))!})
+			if results.count > 0 {
 				return results
 			}
 		return []
@@ -76,22 +76,22 @@ class GnomeListViewModel {
 				return ()
 		}
 	}
-	
+
 	func showDetail(gnome gnomeSelected: Gnome) {
 		coordinatorDelegate?.gnomeListViewModel(self, didTapGnome: gnomeSelected)
 	}
-	
+
 	func search(query queryString: String) -> Observable<Void> {
 		return gnomes.asObservable()
-			.map{$0}
-			.flatMapLatest{ (gnomes) -> Observable<[Gnome]> in
+			.map {$0}
+			.flatMapLatest { (gnomes) -> Observable<[Gnome]> in
 				let results = gnomes.filter({ ($0.name?.contains(queryString))!})
 				if results.count > 0 {
 					return Observable.just(results)
 				}
 				return Observable.just([])
 			}
-			.doOnNext{ [unowned self] in
+			.doOnNext { [unowned self] in
 				self.gnomes.value = $0
 			}
 			.map { (_) in return () }

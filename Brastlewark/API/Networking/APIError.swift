@@ -20,10 +20,10 @@ enum ApiErrorCode: Int {
 	case missingJwtKey     = -101
 	case couldNotSignToken = -102
 	case castingError      = -103
-	
+
 	// General error codes
 	case invalidApiKey = -1000
-	
+
 	// User error codes
 }
 
@@ -32,7 +32,7 @@ extension ApiError: Decodable {
 		static let code = "code"
 		static let description = "message"
 	}
-	
+
 	init?(json: JSON) {
 		guard let code: Int = JsonKeys.code <~~ json
 			else { return nil }

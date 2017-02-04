@@ -12,16 +12,16 @@ import Localize_Swift
 
 struct GnomeTableViewCellViewModel {
 	fileprivate let disposeBag = DisposeBag()
-	
+
 	// MARK: - Internal properties
 	let gnome = Variable<Gnome?>(nil)
 	let name = Variable<String?>(nil)
 	let imageURL = Variable<URL?>(nil)
-	
+
 	init() {
 		setupRx()
 	}
-	
+
 	// MARK: - Rx functions
 	fileprivate func setupRx() {
 		gnome.asObservable()

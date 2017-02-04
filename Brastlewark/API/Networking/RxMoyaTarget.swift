@@ -12,7 +12,7 @@ import Moya
 import Alamofire
 
 enum RxMoyaTarget {
-	
+
 	//Gnomes
 	case getGnomes
 }
@@ -57,7 +57,7 @@ extension RxMoyaTarget: TargetType {
 			return URLEncoding.default
 		}
 	}
-	
+
 	// MARK: - Internal functions
 	func endpoint() -> Endpoint<RxMoyaTarget> {
 		var endpoint: Endpoint<RxMoyaTarget>

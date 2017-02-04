@@ -10,8 +10,8 @@ import Foundation
 import RxSwift
 
 struct GnomesAPI {
-	
-	static func listGnomes()-> Observable<[Gnome]>{
+
+	static func listGnomes()-> Observable<[Gnome]> {
 		return GnomesNetworkingService.listPonies()
 	}
 }

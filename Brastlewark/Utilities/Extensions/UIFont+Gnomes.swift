@@ -18,7 +18,7 @@ enum Font {
 	case sfUiTextBold
 	case sfUiTextMedium
 	case sfUiDisplayLight
-	
+
 	func uiFont(size: CGFloat) -> UIFont {
 		let name: String
 		switch self {
@@ -55,7 +55,7 @@ extension UIFont {
 			print("Font Names = [\(names)]")
 		}
 	}
-	
+
 	func monospaced() -> UIFont {
 		let fontFeatures = [
 			[UIFontFeatureTypeIdentifierKey: kNumberSpacingType,

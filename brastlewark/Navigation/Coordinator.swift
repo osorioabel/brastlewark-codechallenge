@@ -11,7 +11,7 @@ typealias CoordinatorsDictionary = [String: Coordinator]
 
 protocol Coordinator {
 	var rootViewController: UIViewController { get }
-	
+
 	func start()
 }
 

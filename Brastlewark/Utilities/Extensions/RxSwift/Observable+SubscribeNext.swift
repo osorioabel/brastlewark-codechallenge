@@ -14,19 +14,19 @@ extension Observable {
 	func subscribeNext(_ onNext: ((Element) -> Void)?) -> Disposable {
 		return subscribe(onNext: onNext)
 	}
-	
+
 	func subscribeError(_ onError: ((Error) -> Void)?) -> Disposable {
 		return subscribe(onError: onError)
 	}
-	
+
 	func subscribeCompleted(_ onCompleted: (() -> Void)?) -> Disposable {
 		return subscribe(onCompleted: onCompleted)
 	}
-	
+
 	func doOnNext(_ onNext: ((Element) throws -> Void)?) -> Observable<Element> {
 		return `do`(onNext: onNext)
 	}
-	
+
 	func doOnError(_ onError: ((Error) throws -> Void)?) -> Observable<Element> {
 		return `do`(onError: onError)
 	}

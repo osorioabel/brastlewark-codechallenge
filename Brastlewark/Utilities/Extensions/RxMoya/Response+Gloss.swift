@@ -17,12 +17,12 @@ extension Response {
 		}
 		return object
 	}
-	
+
 	func mapArray<T: Decodable>() throws -> [T] {
 		guard let jsonArray = try mapJSON() as? [JSON] else {
 			throw Moya.MoyaError.jsonMapping(self)
 		}
-		
+
 		return [T].from(jsonArray: jsonArray) ?? []
 	}
 }

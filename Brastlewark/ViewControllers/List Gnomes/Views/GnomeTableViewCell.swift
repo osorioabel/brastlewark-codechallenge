@@ -15,7 +15,7 @@ class GnomeTableViewCell: UITableViewCell {
 	// MARK: - IBOutlet properties
 	@IBOutlet weak var nameLabel: UILabel!
 	@IBOutlet weak var thumbnailImageView: RemoteImageView!
-	
+
 	// MARK: - Private properties
 	fileprivate let disposeBag = DisposeBag()
 	fileprivate let viewModel = GnomeTableViewCellViewModel()
@@ -23,7 +23,7 @@ class GnomeTableViewCell: UITableViewCell {
 		.font(Font.sfUiTextRegular.uiFont(size: 30).monospaced())
 		.foregroundColor(.gnomesPrimaryTextColor())
 		.lineSpacing(2.0)
-	
+
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -34,7 +34,7 @@ class GnomeTableViewCell: UITableViewCell {
 		self.thumbnailImageView.addGestureRecognizer(imagePinchGesture)
 		setupRx()
     }
-	
+
 	// MARK: - Rx methods
 	fileprivate func setupRx() {
 		viewModel.name
@@ -56,9 +56,9 @@ class GnomeTableViewCell: UITableViewCell {
 				self.thumbnailImageView.url = url
 			}.addDisposableTo(disposeBag)
 	}
-	
+
 	// MARK: - Internal methods
-	func update(gnome:Gnome){
+	func update(gnome: Gnome) {
 		viewModel.gnome.value = gnome
 	}
 }

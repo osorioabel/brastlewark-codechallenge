@@ -32,21 +32,21 @@ class GnomesListViewController: UIViewController {
 	// MARK: - Private properties
 	fileprivate let disposeBag = DisposeBag()
 	fileprivate let dataSource = RxTableViewSectionedReloadDataSource<SectionModel<String?, Gnome>>()
-	
+
 	// MARK: - Properties
 	var viewModel: GnomeListViewModel
-	
+
 	// MARK: - Life Cycle
 	init(viewModel: GnomeListViewModel) {
 		self.viewModel = viewModel
-		
+
 		super.init(nibName: String(describing: GnomesListViewController.self), bundle: nil)
 	}
-	
+
 	required init?(coder aDecoder: NSCoder) {
 		fatalError("init(coder:) has not been implemented")
 	}
-	
+
 	// MARK: - View Life Cycle
 	override func viewDidLoad() {
 		super.viewDidLoad()
@@ -55,12 +55,12 @@ class GnomesListViewController: UIViewController {
 		setupSearchViewController()
 		refresh(force: false)
 	}
-	
+
 	// MARK: - internal helpers
-	func setupNavigationBarButtons(){
+	func setupNavigationBarButtons() {
 		navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
 	}
-	
+
 	func setupTableView() {
 		tableView.registerCell(GnomeTableViewCell.self)
 		tableView.rowHeight = 263
@@ -93,7 +93,7 @@ class GnomesListViewController: UIViewController {
 				self.tableView.deselectRow(at: indexPath, animated: true)
 			}
 			.addDisposableTo(disposeBag)
-		
+
 		tableView.rx.modelSelected(Gnome.self)
 			.asObservable()
 			.subscribeNext { [unowned self] (gnome) in
@@ -113,7 +113,7 @@ class GnomesListViewController: UIViewController {
 			}
 			.addDisposableTo(disposeBag)
 		searchViewController.searchBar.rx.cancelButtonClicked
-			.subscribeNext{ [unowned self] in
+			.subscribeNext { [unowned self] in
 				self.viewModel.gnomes.value = self.viewModel.cachedGnomes
 				self.searchViewController.searchBar.resignFirstResponder()
 			}
@@ -139,13 +139,13 @@ class GnomesListViewController: UIViewController {
 			}
 			.addDisposableTo(disposeBag)
 	}
-	
+
 	// MARK: - UIRefreshControl action methods
 	func refreshControlValueChanged() {
 		refresh(force: true)
 	}
 }
-extension GnomesListViewController: UITableViewDelegate{
+extension GnomesListViewController: UITableViewDelegate {
 	func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCellEditingStyle {
 		return .none
 	}

@@ -10,7 +10,7 @@ import Foundation
 import Gloss
 
 class Gnome: Decodable, Encodable {
-	
+
 	// MARK: - Properties
 	var id: Int
 	var name: String?
@@ -22,7 +22,7 @@ class Gnome: Decodable, Encodable {
 	var hairColor: String?
 	var professions: String?
 	var friends: String?
-	
+
 	// MARK: - Enums and Structs
 	fileprivate struct JSONKey {
 		static let id = "id"
@@ -36,7 +36,7 @@ class Gnome: Decodable, Encodable {
 		static let professions = "professions"
 		static let friends = "friends"
 	}
-	
+
 	// MARK: - Initialization
 	required init?(json: JSON) {
 		guard let id: Int = JSONKey.id <~~ json
@@ -58,9 +58,9 @@ class Gnome: Decodable, Encodable {
 		if let friendsArray: [String] = JSONKey.friends <~~ json {
 			friends = friendsArray.joined(separator:", ")
 		}
-		gender = ["Female","Male"].randomElement
+		gender = ["Female", "Male"].randomElement
 	}
-	
+
 	// MARK: - Encodable protocol conformance
 	func toJSON() -> JSON? {
 		return jsonify([JSONKey.id ~~> id,
