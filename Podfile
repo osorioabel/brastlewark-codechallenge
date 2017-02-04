@@ -1,10 +1,10 @@
 platform :ios, '10.0'
 
-target 'brastlewark' do
+target 'Brastlewark' do
   use_frameworks!
   # Pods for brastlewark
-   pod 'RxSwift',    '~> 3.0'
-   pod 'RxCocoa',    '~> 3.0'
+   pod 'RxSwift','~> 3.0'
+   pod 'RxCocoa','~> 3.0'
    pod 'Moya', '8.0.2'
    pod 'Moya/RxSwift'
    pod 'Gloss', '~> 1.2'

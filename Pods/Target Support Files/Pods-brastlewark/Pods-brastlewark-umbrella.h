@@ -11,6 +11,6 @@
 #endif
 
 
-FOUNDATION_EXPORT double Pods_brastlewarkVersionNumber;
-FOUNDATION_EXPORT const unsigned char Pods_brastlewarkVersionString[];
+FOUNDATION_EXPORT double Pods_BrastlewarkVersionNumber;
+FOUNDATION_EXPORT const unsigned char Pods_BrastlewarkVersionString[];
 
