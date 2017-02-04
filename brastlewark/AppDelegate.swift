@@ -8,6 +8,7 @@
 
 import UIKit
 import SwiftyUserDefaults
+import MRProgress
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -36,6 +37,7 @@ extension AppDelegate {
 		UINavigationBar.appearance().barTintColor = .black
 		UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName: UIColor.white]
 		UIApplication.shared.statusBarStyle = .lightContent
+		MRProgressOverlayView.appearance().tintColor = .black
 	}
 
 }
