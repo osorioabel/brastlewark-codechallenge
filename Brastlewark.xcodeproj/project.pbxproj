@@ -7,9 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0D46B0E11E45A74D0051FDD6 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0D46B0E31E45A74D0051FDD6 /* Localizable.strings */; };
 		0D51F89E1E43F5B100A86035 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D51F89D1E43F5B100A86035 /* AppDelegate.swift */; };
 		0D51F8A51E43F5B100A86035 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0D51F8A41E43F5B100A86035 /* Assets.xcassets */; };
-		0D51F8A81E43F5B100A86035 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0D51F8A61E43F5B100A86035 /* LaunchScreen.storyboard */; };
 		0D51F8C41E43FF8300A86035 /* GnomesListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D51F8C21E43FF8300A86035 /* GnomesListViewController.swift */; };
 		0D51F8C51E43FF8300A86035 /* GnomesListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0D51F8C31E43FF8300A86035 /* GnomesListViewController.xib */; };
 		0D51F8C81E44000B00A86035 /* RxMoyaTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D51F8C71E44000B00A86035 /* RxMoyaTarget.swift */; };
@@ -62,10 +62,11 @@
 
 /* Begin PBXFileReference section */
 		09CD828A6CD1367556813C6B /* Pods_brastlewark.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_brastlewark.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0D46B0E21E45A74D0051FDD6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		0D46B0E41E45A7590051FDD6 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
 		0D51F89A1E43F5B100A86035 /* Brastlewark.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Brastlewark.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0D51F89D1E43F5B100A86035 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0D51F8A41E43F5B100A86035 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		0D51F8A71E43F5B100A86035 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0D51F8A91E43F5B100A86035 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0D51F8C21E43FF8300A86035 /* GnomesListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GnomesListViewController.swift; sourceTree = "<group>"; };
 		0D51F8C31E43FF8300A86035 /* GnomesListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GnomesListViewController.xib; sourceTree = "<group>"; };
@@ -169,7 +170,6 @@
 			isa = PBXGroup;
 			children = (
 				0D51F8BA1E43F6B700A86035 /* Assets */,
-				0D51F8A61E43F5B100A86035 /* LaunchScreen.storyboard */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -300,6 +300,7 @@
 		0D51F8BB1E43F6CF00A86035 /* Localizable */ = {
 			isa = PBXGroup;
 			children = (
+				0D46B0E31E45A74D0051FDD6 /* Localizable.strings */,
 			);
 			path = Localizable;
 			sourceTree = "<group>";
@@ -478,7 +479,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
-				Base,
+				es,
 			);
 			mainGroup = 0D51F8911E43F5B100A86035;
 			productRefGroup = 0D51F89B1E43F5B100A86035 /* Products */;
@@ -500,7 +501,6 @@
 				0D51F9141E44066C00A86035 /* SF-UI-Text-Bold.otf in Resources */,
 				0D51F9231E44066C00A86035 /* UbuntuMono-R.ttf in Resources */,
 				0D51F92C1E44093000A86035 /* GnomeTableViewCell.xib in Resources */,
-				0D51F8A81E43F5B100A86035 /* LaunchScreen.storyboard in Resources */,
 				0D51F9171E44066C00A86035 /* SF-UI-Text-Regular.otf in Resources */,
 				0D51F8C51E43FF8300A86035 /* GnomesListViewController.xib in Resources */,
 				0D9D87031E444D730006422A /* GnomeDetailViewController.xib in Resources */,
@@ -508,6 +508,7 @@
 				0D51F91E1E44066C00A86035 /* Ubuntu-MI.ttf in Resources */,
 				0D51F9221E44066C00A86035 /* UbuntuMono-BI.ttf in Resources */,
 				0D51F9131E44066C00A86035 /* SF-UI-Display-Light.otf in Resources */,
+				0D46B0E11E45A74D0051FDD6 /* Localizable.strings in Resources */,
 				0D51F91A1E44066C00A86035 /* Ubuntu-C.ttf in Resources */,
 				0D51F9151E44066C00A86035 /* SF-UI-Text-Light.otf in Resources */,
 				0D51F9211E44066C00A86035 /* UbuntuMono-B.ttf in Resources */,
@@ -622,14 +623,15 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		0D51F8A61E43F5B100A86035 /* LaunchScreen.storyboard */ = {
+		0D46B0E31E45A74D0051FDD6 /* Localizable.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				0D51F8A71E43F5B100A86035 /* Base */,
+				0D46B0E21E45A74D0051FDD6 /* en */,
+				0D46B0E41E45A7590051FDD6 /* es */,
 			);
-			name = LaunchScreen.storyboard;
-			path = .;
-			sourceTree = "<group>";
+			name = Localizable.strings;
+			path = Brastlewark/Utilities;
+			sourceTree = SOURCE_ROOT;
 		};
 /* End PBXVariantGroup section */
 
@@ -638,6 +640,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
@@ -687,6 +690,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
