@@ -71,7 +71,7 @@ class Gnome: Decodable, Encodable {
 		                JSONKey.height ~~> height,
 		                JSONKey.thumbnail ~~> thumbnail,
 		                JSONKey.professions ~~> professions,
-		                JSONKey.friends ~~> friends,
+		                JSONKey.friends ~~> friends
 			])
 	}
 }
