@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		0D46B0E11E45A74D0051FDD6 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0D46B0E31E45A74D0051FDD6 /* Localizable.strings */; };
+		0D46B0E61E45B5070051FDD6 /* Encoder+StringArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D46B0E51E45B5070051FDD6 /* Encoder+StringArray.swift */; };
+		0D46B0E81E45B51A0051FDD6 /* Decoder+StringArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D46B0E71E45B51A0051FDD6 /* Decoder+StringArray.swift */; };
+		0D46B0EA1E45B8930051FDD6 /* Foundation+Gnomes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D46B0E91E45B8930051FDD6 /* Foundation+Gnomes.swift */; };
 		0D51F89E1E43F5B100A86035 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D51F89D1E43F5B100A86035 /* AppDelegate.swift */; };
 		0D51F8A51E43F5B100A86035 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0D51F8A41E43F5B100A86035 /* Assets.xcassets */; };
 		0D51F8C41E43FF8300A86035 /* GnomesListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D51F8C21E43FF8300A86035 /* GnomesListViewController.swift */; };
@@ -62,6 +65,9 @@
 /* Begin PBXFileReference section */
 		0D46B0E21E45A74D0051FDD6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		0D46B0E41E45A7590051FDD6 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
+		0D46B0E51E45B5070051FDD6 /* Encoder+StringArray.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Encoder+StringArray.swift"; sourceTree = "<group>"; };
+		0D46B0E71E45B51A0051FDD6 /* Decoder+StringArray.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Decoder+StringArray.swift"; sourceTree = "<group>"; };
+		0D46B0E91E45B8930051FDD6 /* Foundation+Gnomes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Foundation+Gnomes.swift"; sourceTree = "<group>"; };
 		0D51F89A1E43F5B100A86035 /* Brastlewark.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Brastlewark.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0D51F89D1E43F5B100A86035 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0D51F8A41E43F5B100A86035 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -195,7 +201,6 @@
 				0D9D87001E444D730006422A /* GnomeDetailViewController.swift */,
 				0D9D87011E444D730006422A /* GnomeDetailViewController.xib */,
 			);
-			name = GnomeDetail;
 			path = GnomeDetail;
 			sourceTree = "<group>";
 		};
@@ -255,6 +260,9 @@
 				0D51F8D71E44050B00A86035 /* UIColor+Gnomes.swift */,
 				0D51F8D91E44056600A86035 /* UIFont+Gnomes.swift */,
 				0D51F92F1E440F8D00A86035 /* UIViewcontoller+Convenience.swift */,
+				0D46B0E51E45B5070051FDD6 /* Encoder+StringArray.swift */,
+				0D46B0E71E45B51A0051FDD6 /* Decoder+StringArray.swift */,
+				0D46B0E91E45B8930051FDD6 /* Foundation+Gnomes.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -289,7 +297,6 @@
 				0D51F9111E44066C00A86035 /* UbuntuMono-R.ttf */,
 				0D51F9121E44066C00A86035 /* UbuntuMono-RI.ttf */,
 			);
-			name = Fonts;
 			path = Fonts;
 			sourceTree = "<group>";
 		};
@@ -306,7 +313,6 @@
 			children = (
 				0D46B0E31E45A74D0051FDD6 /* Localizable.strings */,
 			);
-			name = Localizable;
 			path = Localizable;
 			sourceTree = "<group>";
 		};
@@ -324,7 +330,6 @@
 			children = (
 				0D51F8D41E44047800A86035 /* RemoteImageView.swift */,
 			);
-			name = CustomViews;
 			path = CustomViews;
 			sourceTree = "<group>";
 		};
@@ -585,6 +590,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0D51F93F1E44242500A86035 /* AppCoordinator.swift in Sources */,
+				0D46B0E61E45B5070051FDD6 /* Encoder+StringArray.swift in Sources */,
 				0D51F9261E44088E00A86035 /* Gnome.swift in Sources */,
 				0D51F8C81E44000B00A86035 /* RxMoyaTarget.swift in Sources */,
 				0D51F8CB1E44010000A86035 /* SampleDataHelper.swift in Sources */,
@@ -601,7 +607,9 @@
 				0D51F8C41E43FF8300A86035 /* GnomesListViewController.swift in Sources */,
 				0D51F9411E44245600A86035 /* GnomeCoordinator.swift in Sources */,
 				0D51F9361E4410B500A86035 /* GnomesClient.swift in Sources */,
+				0D46B0EA1E45B8930051FDD6 /* Foundation+Gnomes.swift in Sources */,
 				0D51F8CE1E44038E00A86035 /* Response+Gloss.swift in Sources */,
+				0D46B0E81E45B51A0051FDD6 /* Decoder+StringArray.swift in Sources */,
 				0DC538DA1E455DA1009DE01A /* DefaultsKey+Gnomes.swift in Sources */,
 				0D51F8D31E44040300A86035 /* Observable+SubscribeNext.swift in Sources */,
 				0D51F93B1E44192200A86035 /* GnomeTableViewCellViewModel.swift in Sources */,

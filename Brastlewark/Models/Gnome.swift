@@ -52,12 +52,8 @@ class Gnome: Decodable, Encodable {
 		weight = JSONKey.weight <~~ json
 		height = JSONKey.height <~~ json
 		hairColor = JSONKey.hairColor <~~ json
-		if let professionsArray: [String] = JSONKey.professions <~~ json {
-			professions = professionsArray.joined(separator:", ")
-		}
-		if let friendsArray: [String] = JSONKey.friends <~~ json {
-			friends = friendsArray.joined(separator:", ")
-		}
+		professions = Decoder.decodeStringArray(key: JSONKey.professions, json: json)
+		friends = Decoder.decodeStringArray(key: JSONKey.friends, json: json)
 		gender = ["Female", "Male"].randomElement
 	}
 
@@ -70,14 +66,9 @@ class Gnome: Decodable, Encodable {
 		                JSONKey.weight ~~> weight,
 		                JSONKey.height ~~> height,
 		                JSONKey.thumbnail ~~> thumbnail,
-		                JSONKey.professions ~~> professions,
-		                JSONKey.friends ~~> friends
+		                JSONKey.hairColor ~~> hairColor,
+		                Encoder.encodeStringArray(key: JSONKey.professions, value:professions),
+		                Encoder.encodeStringArray(key: JSONKey.friends, value:friends)
 			])
-	}
-}
-extension Array {
-	var randomElement: Element {
-		let index = Int(arc4random_uniform(UInt32(count)))
-		return self[index]
 	}
 }
