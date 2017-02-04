@@ -12,6 +12,7 @@ import UIKit
 import Moya
 import RxSwift
 import Gloss
+import SwiftyUserDefaults
 
 enum InternalError: Swift.Error {
 	case noCredentialsFound

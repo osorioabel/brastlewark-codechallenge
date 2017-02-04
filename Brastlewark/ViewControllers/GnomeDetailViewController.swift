@@ -19,7 +19,7 @@ class GnomeDetailViewController: UIViewController {
 	@IBOutlet weak var detailLabel: UILabel!
 	
 	fileprivate let primaryAttributes = TextAttributes()
-		.font(Font.sfUiTextRegular.uiFont(size: 30))
+		.font(Font.sfUiTextRegular.uiFont(size: 24))
 		.foregroundColor(.gnomesPrimaryTextColor())
 		.lineSpacing(2.0)
 	

@@ -8,6 +8,7 @@
 
 import Foundation
 import RxSwift
+import SwiftyUserDefaults
 
 protocol GnomeListViewModelCoordinatorDelegate: class {
 	func gnomeListViewModel(_ viewModel: GnomeListViewModel, didTapGnome gnome: Gnome)
@@ -16,46 +17,49 @@ protocol GnomeListViewModelCoordinatorDelegate: class {
 class GnomeListViewModel {
 	// MARK: - Private properties
 	fileprivate let disposeBag = DisposeBag()
-	fileprivate let searchResults = Variable([Gnome]())
+	fileprivate let searchResults = Variable<[Gnome]>([])
 	
 	// MARK: - Internal properties
 	weak var coordinatorDelegate: GnomeListViewModelCoordinatorDelegate?
-	let gnomes: Variable<[Gnome]>
+	let gnomes = Variable<[Gnome]>([])
+	var cachedGnomes:[Gnome]
 	let query = Variable<String>("")
 	
 	init() {
-		gnomes = Variable([Gnome]())
-		
+		cachedGnomes = Defaults[.recentlyDonwloadedGnomes]
 		setupRx()
 	}
 
 	func setupRx(){
-
-		query.asObservable()
+		let observedQuery = query.asObservable()
 			.throttle(0.3, scheduler: MainScheduler.instance)
 			.distinctUntilChanged()
-			.map {
-				let query = $0.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines)
-				return self.filterGnomeByName(query: query)
+			.map { $0.trimmingCharacters(in: .whitespacesAndNewlines) }
+		
+		observedQuery
+			.filter{ $0.characters.count >= 3}
+			.map { [unowned self] (query) in
+				self.filterGnomeByName(query: query)
 			}
+			.map { $0 }
 			.bindTo(searchResults)
 			.addDisposableTo(disposeBag)
-
-		query.asObservable()
+		observedQuery
 			.filter { $0.characters.count < 3 }
-			.map { (_) in return [] }
+			.map { [unowned self] (_) in return self.cachedGnomes }
 			.bindTo(gnomes)
 			.addDisposableTo(disposeBag)
 
 		searchResults.asObservable()
 			.filter { (_) in self.query.value.characters.count >= 3 }
-			.map { $0}
+			.map { $0 }
 			.bindTo(gnomes)
 			.addDisposableTo(disposeBag)
 	}
 
 	fileprivate func filterGnomeByName(query: String) -> [Gnome] {
-		let results:[Gnome] = self.gnomes.value.filter({ ($0.name?.contains(query))!})
+		let searchArray = self.gnomes.value
+		let results:[Gnome] = searchArray.filter({ ($0.name?.contains(query))!})
 			if results.count > 0{
 				return results
 			}
@@ -65,6 +69,10 @@ class GnomeListViewModel {
 		return GnomesAPI.listGnomes()
 			.map { [unowned self] in
 				self.gnomes.value = $0
+				DispatchQueue.global(qos: DispatchQoS.background.qosClass).async {
+					Defaults[.recentlyDonwloadedGnomes] = self.gnomes.value
+					self.cachedGnomes = Defaults[.recentlyDonwloadedGnomes]
+				}
 				return ()
 		}
 	}
@@ -73,10 +81,6 @@ class GnomeListViewModel {
 		coordinatorDelegate?.gnomeListViewModel(self, didTapGnome: gnomeSelected)
 	}
 	
-	func deleteAll(){
-		gnomes.value = []
-	}
-
 	func search(query queryString: String) -> Observable<Void> {
 		return gnomes.asObservable()
 			.map{$0}

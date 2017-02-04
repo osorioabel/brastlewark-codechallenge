@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SwiftyUserDefaults
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -20,7 +21,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 		URLCache.shared = urlCache
 		let window: UIWindow = UIWindow()
 		self.window = window
-		
 		appCoordinator = AppCoordinator(window: window)
 		appCoordinator.start()
 		

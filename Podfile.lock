@@ -48,6 +48,7 @@ PODS:
     - RxSwift (~> 3.0)
   - RxSwift (3.2.0)
   - SnapKit (3.1.2)
+  - SwiftyUserDefaults (3.0.0)
   - TextAttributes (1.0)
 
 DEPENDENCIES:
@@ -62,6 +63,7 @@ DEPENDENCIES:
   - RxDataSources (~> 1.0)
   - RxSwift (~> 3.0)
   - SnapKit (~> 3.1.2)
+  - SwiftyUserDefaults
   - TextAttributes
 
 EXTERNAL SOURCES:
@@ -87,8 +89,9 @@ SPEC CHECKSUMS:
   RxDataSources: 1de77880bf5b7fcee42102adcd5a5d65e5b81541
   RxSwift: 46574f70d416b7923c237195939cc488a7fbf3a0
   SnapKit: 12b24f569cb7c143acc9c22b9d91b23e7b1c84a2
+  SwiftyUserDefaults: 0f1d45fc3aafb9064dac661e367f8f83fe21a4b4
   TextAttributes: 45b2713a1d174c377d320b51129c304eac381638
 
-PODFILE CHECKSUM: 41fc5ec8dd09017e9a32a135ad01437a6633cbf1
+PODFILE CHECKSUM: 528ea48ebe6345e19282ee91cf8efc11ca3f3bac
 
 COCOAPODS: 1.2.0

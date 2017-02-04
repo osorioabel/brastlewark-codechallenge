@@ -15,4 +15,5 @@ target 'brastlewark' do
    pod 'CellRegistrable', :git => 'https://github.com/KogiMobileSAS/CellRegistrable', :branch => 'swift3'
    pod 'MRProgress'
    pod 'DZNEmptyDataSet'
+   pod 'SwiftyUserDefaults'
 end

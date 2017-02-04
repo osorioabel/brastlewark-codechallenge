@@ -55,6 +55,7 @@
 		0D9D87021E444D730006422A /* GnomeDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D9D87001E444D730006422A /* GnomeDetailViewController.swift */; };
 		0D9D87031E444D730006422A /* GnomeDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0D9D87011E444D730006422A /* GnomeDetailViewController.xib */; };
 		0D9D87061E444E700006422A /* GnomeDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D9D87051E444E700006422A /* GnomeDetailViewModel.swift */; };
+		0DC538DA1E455DA1009DE01A /* DefaultsKey+Gnomes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DC538D91E455DA1009DE01A /* DefaultsKey+Gnomes.swift */; };
 		6CE82DE9CC524FDA24101FDD /* Pods_brastlewark.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09CD828A6CD1367556813C6B /* Pods_brastlewark.framework */; };
 /* End PBXBuildFile section */
 
@@ -110,6 +111,7 @@
 		0D9D87001E444D730006422A /* GnomeDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GnomeDetailViewController.swift; sourceTree = "<group>"; };
 		0D9D87011E444D730006422A /* GnomeDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GnomeDetailViewController.xib; sourceTree = "<group>"; };
 		0D9D87051E444E700006422A /* GnomeDetailViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GnomeDetailViewModel.swift; sourceTree = "<group>"; };
+		0DC538D91E455DA1009DE01A /* DefaultsKey+Gnomes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DefaultsKey+Gnomes.swift"; sourceTree = "<group>"; };
 		1146406CE11C36739841F2AE /* Pods-brastlewark.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-brastlewark.debug.xcconfig"; path = "Pods/Target Support Files/Pods-brastlewark/Pods-brastlewark.debug.xcconfig"; sourceTree = "<group>"; };
 		27E73AF18B81491ADE455BF0 /* Pods-brastlewark.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-brastlewark.release.xcconfig"; path = "Pods/Target Support Files/Pods-brastlewark/Pods-brastlewark.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -244,6 +246,7 @@
 				0D51F8D71E44050B00A86035 /* UIColor+Gnomes.swift */,
 				0D51F8D91E44056600A86035 /* UIFont+Gnomes.swift */,
 				0D51F92F1E440F8D00A86035 /* UIViewcontoller+Convenience.swift */,
+				0DC538D91E455DA1009DE01A /* DefaultsKey+Gnomes.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -582,6 +585,7 @@
 				0D51F9411E44245600A86035 /* GnomeCoordinator.swift in Sources */,
 				0D51F9361E4410B500A86035 /* GnomesClient.swift in Sources */,
 				0D51F8CE1E44038E00A86035 /* Response+Gloss.swift in Sources */,
+				0DC538DA1E455DA1009DE01A /* DefaultsKey+Gnomes.swift in Sources */,
 				0D51F8D31E44040300A86035 /* Observable+SubscribeNext.swift in Sources */,
 				0D51F93B1E44192200A86035 /* GnomeTableViewCellViewModel.swift in Sources */,
 				0D51F8D11E4403E300A86035 /* Observable+Gloss.swift in Sources */,

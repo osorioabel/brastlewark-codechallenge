@@ -44,10 +44,7 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7e9-bC-aVD">
-                    <rect key="frame" x="8" y="401" width="359" height="74"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="74" id="GAf-og-zsR"/>
-                    </constraints>
+                    <rect key="frame" x="8" y="401" width="359" height="20.5"/>
                     <attributedString key="attributedText">
                         <fragment content="Label">
                             <attributes>
@@ -69,6 +66,7 @@
                 <constraint firstAttribute="trailing" secondItem="MSz-nK-WbW" secondAttribute="trailing" id="btg-my-mIh"/>
                 <constraint firstAttribute="trailing" secondItem="Cg0-1B-3Gm" secondAttribute="trailing" constant="8" id="eyj-oo-PyV"/>
                 <constraint firstItem="MSz-nK-WbW" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="64" id="qEr-2H-8cE"/>
+                <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="7e9-bC-aVD" secondAttribute="bottom" constant="10" id="tEr-cq-t8l"/>
                 <constraint firstItem="Cg0-1B-3Gm" firstAttribute="top" secondItem="MSz-nK-WbW" secondAttribute="bottom" constant="8" id="yTJ-Xp-yvT"/>
             </constraints>
             <point key="canvasLocation" x="290.5" y="63.5"/>

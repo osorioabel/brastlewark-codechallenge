@@ -52,7 +52,6 @@ class GnomesListViewController: UIViewController {
 		super.viewDidLoad()
 		setupNavigationBarButtons()
 		setupTableView()
-		setupRx()
 		setupSearchViewController()
 		refresh(force: false)
 	}
@@ -70,34 +69,13 @@ class GnomesListViewController: UIViewController {
 		tableView.backgroundColor = .gnomesNavigationBarColor()
 		tableView.rx.setDelegate(self)
 			.addDisposableTo(disposeBag)
-
-		tableView.rx.itemSelected
-			.subscribeNext { [unowned self] (indexPath) in
-				self.tableView.deselectRow(at: indexPath, animated: true)
-			}
-			.addDisposableTo(disposeBag)
-
-		tableView.rx.modelSelected(Gnome.self)
-			.asObservable()
-			.subscribeNext { [unowned self] (gnome) in
-				self.viewModel.showDetail(gnome: gnome)
-			}
-			.addDisposableTo(disposeBag)
-
 		dataSource.configureCell = { (_, tableView, indexPath, item) in
 			guard let cell = tableView.dequeueReusableCell(withIdentifier: GnomeTableViewCell.reuseIdentifier,
 			                                               for: indexPath) as? GnomeTableViewCell else { return UITableViewCell() }
 			cell.update(gnome: item)
 			return cell
 		}
-		dataSource.canEditRowAtIndexPath = { _ in
-			return true
-		}
-		NotificationCenter.default.rx.notification(Notification.Name(rawValue: LCLLanguageChangeNotification))
-			.subscribeNext { (_) in
-				self.setupRx()
-			}
-			.addDisposableTo(disposeBag)
+		setupRx()
 	}
 
 	func setupSearchViewController() {
@@ -110,23 +88,33 @@ class GnomesListViewController: UIViewController {
 
 	// MARK: - RxSwift Methods
 	func setupRx() {
+		tableView.rx.itemSelected
+			.subscribeNext { [unowned self] (indexPath) in
+				self.tableView.deselectRow(at: indexPath, animated: true)
+			}
+			.addDisposableTo(disposeBag)
+		
+		tableView.rx.modelSelected(Gnome.self)
+			.asObservable()
+			.subscribeNext { [unowned self] (gnome) in
+				self.viewModel.showDetail(gnome: gnome)
+			}
+			.addDisposableTo(disposeBag)
 		viewModel.gnomes
 			.asObservable()
 			.map {
-				if self.viewModel.query.value.isEmpty {
-					var sections: [SectionModel<String?, Gnome>] = []
-					sections.append(SectionModel(model: nil, items: $0))
-					return sections
-				}else{
-					var sections: [SectionModel<String?, Gnome>] = []
-					sections.append(SectionModel(model: nil, items: $0))
-					return sections
-				}
+				return [SectionModel(model: "", items: $0)]
 			}
 			.bindTo(tableView.rx.items(dataSource: dataSource))
 			.addDisposableTo(disposeBag)
 		searchViewController.searchBar.rx.searchButtonClicked
 			.subscribeNext { [unowned self] in
+				self.searchViewController.searchBar.resignFirstResponder()
+			}
+			.addDisposableTo(disposeBag)
+		searchViewController.searchBar.rx.cancelButtonClicked
+			.subscribeNext{ [unowned self] in
+				self.viewModel.gnomes.value = self.viewModel.cachedGnomes
 				self.searchViewController.searchBar.resignFirstResponder()
 			}
 			.addDisposableTo(disposeBag)

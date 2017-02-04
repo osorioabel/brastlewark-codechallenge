@@ -16,11 +16,12 @@ class Gnome: Decodable, Encodable {
 	var name: String?
 	var thumbnail: URL?
 	var age: Int?
+	var gender: String?
 	var weight: Float?
 	var height: Float?
 	var hairColor: String?
-	var professions: [String]
-	var friends: [String]
+	var professions: String?
+	var friends: String?
 	
 	// MARK: - Enums and Structs
 	fileprivate struct JSONKey {
@@ -28,6 +29,7 @@ class Gnome: Decodable, Encodable {
 		static let name = "name"
 		static let thumbnail = "thumbnail"
 		static let age = "age"
+		static let gender = "gender"
 		static let weight = "weight"
 		static let height = "height"
 		static let hairColor = "hair_color"
@@ -50,14 +52,32 @@ class Gnome: Decodable, Encodable {
 		weight = JSONKey.weight <~~ json
 		height = JSONKey.height <~~ json
 		hairColor = JSONKey.hairColor <~~ json
-		professions = (JSONKey.professions <~~ json)!
-		friends = (JSONKey.friends <~~ json)!
+		if let professionsArray: [String] = JSONKey.professions <~~ json {
+			professions = professionsArray.joined(separator:", ")
+		}
+		if let friendsArray: [String] = JSONKey.friends <~~ json {
+			friends = friendsArray.joined(separator:", ")
+		}
+		gender = ["Female","Male"].randomElement
 	}
 	
 	// MARK: - Encodable protocol conformance
 	func toJSON() -> JSON? {
 		return jsonify([JSONKey.id ~~> id,
 		                JSONKey.name ~~> name,
+		                JSONKey.age ~~> age,
+		                JSONKey.gender ~~> gender,
+		                JSONKey.weight ~~> weight,
+		                JSONKey.height ~~> height,
+		                JSONKey.thumbnail ~~> thumbnail,
+		                JSONKey.professions ~~> professions,
+		                JSONKey.friends ~~> friends,
 			])
+	}
+}
+extension Array {
+	var randomElement: Element {
+		let index = Int(arc4random_uniform(UInt32(count)))
+		return self[index]
 	}
 }
