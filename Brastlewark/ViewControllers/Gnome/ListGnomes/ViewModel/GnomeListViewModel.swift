@@ -41,7 +41,7 @@ class GnomeListViewModel {
 			.bindTo(searchResults)
 			.addDisposableTo(disposeBag)
 		query.asObservable()
-			.filter { $0.characters.count < 3 }
+			.filter { $0.characters.count < 1 }
 			.map { [unowned self] (_) in return self.cachedGnomes }
 			.bindTo(gnomes)
 			.addDisposableTo(disposeBag)
