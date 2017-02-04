@@ -52,7 +52,6 @@ final class MoyaShakeClient {
 
 	// MARK: - Initialization functions
 	private init() {
-		print("MoyaShakeClient Initialized")
 	}
 
 	// MARK: - Gnomes Related functions

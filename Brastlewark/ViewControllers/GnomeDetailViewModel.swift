@@ -59,7 +59,7 @@ struct GnomeDetailViewModel {
 					detailText.append(NSAttributedString(string: "\nHair Color: %@".localizedFormat(hairColor), attributes: self.primaryAttributes))
 				}
 				if let friends = $0?.friends {
-					detailText.append(NSAttributedString(string: "\nFriends %@".localizedFormat(friends), attributes: self.primaryAttributes))
+					detailText.append(NSAttributedString(string: "\nFriends: %@".localizedFormat(friends), attributes: self.primaryAttributes))
 				}
 				if let professions = $0?.professions {
 					detailText.append(NSAttributedString(string: "\nProfession: %@".localizedFormat(professions), attributes: self.primaryAttributes))
