@@ -82,6 +82,7 @@ class GnomesListViewController: UIViewController {
 		searchViewController.hidesNavigationBarDuringPresentation = false
 		searchViewController.dimsBackgroundDuringPresentation = false
 		searchViewController.searchBar.sizeToFit()
+		searchViewController.searchBar.placeholder = "Type the name of the gnome you are looking for".localized()
 		definesPresentationContext = true
 		navigationItem.titleView = searchViewController.searchBar
 	}

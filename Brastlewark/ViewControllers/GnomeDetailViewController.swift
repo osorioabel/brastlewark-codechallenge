@@ -53,7 +53,9 @@ class GnomeDetailViewController: UIViewController {
 	// MARK: - internal methods
 	func setupView() {
 		view.backgroundColor = .black
-
+		let imageViewPinchGesture = ImagePinchGestureRecognizer()
+		self.thumbnailImageView.isUserInteractionEnabled = true
+		self.thumbnailImageView.addGestureRecognizer(imageViewPinchGesture)
 	}
 
 	// MARK: - Rx methods

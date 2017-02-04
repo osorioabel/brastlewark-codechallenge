@@ -24,8 +24,9 @@ class RemoteImageView: UIImageView {
 			}
 		}
 	}
-	fileprivate let activityIndicatorView: UIActivityIndicatorView = {
-		let activityIndicatorView = UIActivityIndicatorView()
+	fileprivate let activityIndicatorView: UIActivityIndicatorView = { (_) in
+		let activityIndicatorView = UIActivityIndicatorView(activityIndicatorStyle: .gray)
+		activityIndicatorView.color = .black
 		return activityIndicatorView
 	}()
 
