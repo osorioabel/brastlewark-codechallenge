@@ -1,0 +1,11 @@
+disabled_rules:
+  - line_length
+  - todo
+  - type_body_length
+  - function_body_length
+  - cyclomatic_complexity
+  - variable_name
+  - file_length
+  - force_try
+excluded: # paths to ignore during linting. Takes precedence over `included`.
+  - Pods
