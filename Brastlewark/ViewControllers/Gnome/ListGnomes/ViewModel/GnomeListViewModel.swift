@@ -31,35 +31,30 @@ class GnomeListViewModel {
 	}
 
 	func setupRx() {
-		let observedQuery = query.asObservable()
+		query.asObservable()
 			.throttle(0.3, scheduler: MainScheduler.instance)
 			.distinctUntilChanged()
-			.map { $0.trimmingCharacters(in: .whitespacesAndNewlines) }
-
-		observedQuery
-			.filter { $0.characters.count >= 3}
 			.map { [unowned self] (query) in
-				self.filterGnomeByName(query: query)
+				self.filterGnomeByName(query: query.lowercased())
 			}
 			.map { $0 }
 			.bindTo(searchResults)
 			.addDisposableTo(disposeBag)
-		observedQuery
+		query.asObservable()
 			.filter { $0.characters.count < 3 }
 			.map { [unowned self] (_) in return self.cachedGnomes }
 			.bindTo(gnomes)
 			.addDisposableTo(disposeBag)
 
 		searchResults.asObservable()
-			.filter { (_) in self.query.value.characters.count >= 3 }
 			.map { $0 }
 			.bindTo(gnomes)
 			.addDisposableTo(disposeBag)
 	}
 
 	fileprivate func filterGnomeByName(query: String) -> [Gnome] {
-		let searchArray = self.gnomes.value
-		let results: [Gnome] = searchArray.filter({ ($0.name?.contains(query))!})
+		let searchArray = self.cachedGnomes
+		let results: [Gnome] = searchArray.filter({ ($0.name?.lowercased().contains(query))!})
 			if results.count > 0 {
 				return results
 			}

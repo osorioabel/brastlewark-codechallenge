@@ -20,7 +20,7 @@ class GnomeTableViewCell: UITableViewCell {
 	fileprivate let disposeBag = DisposeBag()
 	fileprivate let viewModel = GnomeTableViewCellViewModel()
 	fileprivate let primaryAttributes = TextAttributes()
-		.font(Font.sfUiTextRegular.uiFont(size: 30).monospaced())
+		.font(Font.sfUiTextBold.uiFont(size: 22).monospaced())
 		.foregroundColor(.gnomesPrimaryTextColor())
 		.lineSpacing(2.0)
 

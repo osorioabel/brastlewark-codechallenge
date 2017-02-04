@@ -10,10 +10,11 @@
 "An unknown error occurred" = "Error inesperado";
 "Brastlewark" = "Brastlewark";
 "Close" = "Cerrar";
-"Type the name of the gnome you are looking for" = "Escribe el nombre del gnomo que buscas";
+"Type the name of a gnome" = "Escribe el nombre del gnomo";
 "\nFriends: %@" = "\nAmigos: %@";
 "\nGender: %@" = "\nSexo: %@";
 "\nHair Color: %@" = "\nColor de Cabello: %@";
 "\nHeight: %.2f cm" = "\nEstatura: %.2f cm";
 "\nProfession: %@" = "\nProfesión: %@";
-"\nWeight: %.2f lbs" = "\nPeso: %.2f lbs";
+"\nWeight: %.2f lbs" = "\nPeso: %.2f Kg";
+"No results found" = "No se ha encontrado resultados";

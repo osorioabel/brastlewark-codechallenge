@@ -82,7 +82,7 @@ class GnomesListViewController: UIViewController {
 		searchViewController.hidesNavigationBarDuringPresentation = false
 		searchViewController.dimsBackgroundDuringPresentation = false
 		searchViewController.searchBar.sizeToFit()
-		searchViewController.searchBar.placeholder = "Type the name of the gnome you are looking for".localized()
+		searchViewController.searchBar.placeholder = "Type the name of the gnome".localized()
 		searchViewController.searchBar.subviews[0].subviews.flatMap() { $0 as? UITextField }.first?.tintColor = .black
 		definesPresentationContext = true
 		navigationItem.titleView = searchViewController.searchBar
@@ -147,8 +147,19 @@ class GnomesListViewController: UIViewController {
 		refresh(force: true)
 	}
 }
+// MARK: - UITableViewDelegate prtocol conformance
 extension GnomesListViewController: UITableViewDelegate {
 	func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCellEditingStyle {
 		return .none
+	}
+}
+// MARK: - DZNEmptyDataSet prtocol conformance
+extension GnomesListViewController : DZNEmptyDataSetSource {
+	func title(forEmptyDataSet scrollView: UIScrollView!) -> NSAttributedString! {
+		let attributes = TextAttributes()
+			.font(Font.sfUiTextBold.uiFont(size: 22).monospaced())
+			.foregroundColor(.gnomesPrimaryTextColor())
+			.lineSpacing(2.0)
+		return NSAttributedString(string: "No results found".localized(), attributes: attributes)
 	}
 }

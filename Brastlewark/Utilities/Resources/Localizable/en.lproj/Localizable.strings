@@ -10,10 +10,11 @@
 "An unknown error occurred" = "An unknown error occurred";
 "Brastlewark" = "Brastlewark";
 "Close" = "Close";
-"Type the name of the gnome you are looking for" = "Type the name of the gnome you are looking for";
+"Type the name of a gnome" = "Type the name of the gnome";
 "\nFriends: %@" = "\nFriends: %@";
 "\nGender: %@" = "\nGender: %@";
 "\nHair Color: %@" = "\nHair Color: %@";
 "\nHeight: %.2f cm" = "\nHeight: %.2f cm";
 "\nProfession: %@" = "\nProfession: %@";
 "\nWeight: %.2f lbs" = "\nWeight: %.2f lbs";
+"No results found" = "No results found";
